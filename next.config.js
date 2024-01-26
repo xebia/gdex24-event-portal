@@ -4,7 +4,7 @@ require('dotenv').config({ path: `.env.${process.env.NODE_ENV}` })
 const nextConfig = {
     basePath: process.env.BASE_PATH,
     reactStrictMode: true,
-    outputFileTracing: true
+    output: "export",
 }
 
 module.exports = nextConfig
