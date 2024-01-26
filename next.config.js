@@ -1,7 +1,8 @@
+require('dotenv').config({ path: `.env.${process.env.NODE_ENV}` })
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-    basePath: "/",
-    output: "export",  // <=== enables static exports
+    basePath: process.env.BASE_PATH,
     reactStrictMode: true,
 }
 
