@@ -1,3 +1,5 @@
+'use client';
+
 import { RegisterVenue } from '@/components/RegisterVenue'
 import { Hero } from '@/components/Hero'
 import { BackgroundImage } from '@/components/BackgroundImage'
