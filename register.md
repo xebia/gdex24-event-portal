@@ -23,108 +23,112 @@ permalink: /register/
             <div class="aspect-[1155/678] w-[72.1875rem] bg-gradient-to-br from-[#80caff] to-[#4f46e5] opacity-20" style="clip-path: polygon(74.1% 56.1%, 100% 38.6%, 97.5% 73.3%, 85.5% 100%, 80.7% 98.2%, 72.5% 67.7%, 60.2% 37.8%, 52.4% 32.2%, 47.5% 41.9%, 45.2% 65.8%, 27.5% 23.5%, 0.1% 35.4%, 17.9% 0.1%, 27.6% 23.5%, 76.1% 2.6%, 74.1% 56.1%)"></div>
           </div>
         </div>
-        <h2 class="text-3xl font-bold tracking-tight text-white">Get in touch</h2>
-        <button id="sign-in-button">Sign in with GitHub</button>
-        <p class="mt-6 text-lg leading-8 text-gray-300">Proin volutpat consequat porttitor cras nullam gravida at. Orci molestie a eu arcu. Sed ut tincidunt integer elementum id sem. Arcu sed malesuada et magna.</p>
-        <dl class="mt-10 space-y-4 text-base leading-7 text-gray-300">
-          <div class="flex gap-x-4">
-            <dt class="flex-none">
-              <span class="sr-only">Address</span>
-              <svg class="h-7 w-6 text-gray-400" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 21h19.5m-18-18v18m10.5-18v18m6-13.5V21M6.75 6.75h.75m-.75 3h.75m-.75 3h.75m3-6h.75m-.75 3h.75m-.75 3h.75M6.75 21v-3.375c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21M3 3h12m-.75 4.5H21m-3.75 3.75h.008v.008h-.008v-.008zm0 3h.008v.008h-.008v-.008zm0 3h.008v.008h-.008v-.008z" />
-              </svg>
-            </dt>
-            <dd>545 Mavis Island<br>Chicago, IL 99191</dd>
-          </div>
-          <div class="flex gap-x-4">
-            <dt class="flex-none">
-              <span class="sr-only">Telephone</span>
-              <svg class="h-7 w-6 text-gray-400" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z" />
-              </svg>
-            </dt>
-            <dd><a class="hover:text-white" href="tel:+1 (555) 234-5678">+1 (555) 234-5678</a></dd>
-          </div>
-          <div class="flex gap-x-4">
-            <dt class="flex-none">
-              <span class="sr-only">Email</span>
-              <svg class="h-7 w-6 text-gray-400" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75" />
-              </svg>
-            </dt>
-            <dd><a class="hover:text-white" href="mailto:hello@example.com">hello@example.com</a></dd>
-          </div>
-        </dl>
+        <h2 class="text-3xl font-bold tracking-tight text-white">Register your venue</h2>
+        <p class="mt-6 text-lg leading-8 text-gray-300">Thanks for taking the time to register your venue. We are looking forward to work together to make this event a big success!</p>
+        <p class="mt-6 text-lg leading-8 text-gray-300">In order to sign up, we need your GitHub handle, so we will authenticate you against the GitHub system. By doing so, you agree that we store your username and email address, in addition to the information you will provide us.</p>
       </div>
     </div>
-   <form id="venue-registration-form" class="px-6 pb-24 pt-20 sm:pb-32 lg:px-8 lg:py-48">
-  <div class="mx-auto max-w-xl lg:mr-0 lg:max-w-lg">
-    <div class="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
-      <!-- Venue Name -->
-      <div class="sm:col-span-2">
-        <label for="venue-name" class="block text-sm font-semibold leading-6 text-white">Venue Name</label>
-        <div class="mt-2.5">
-          <input type="text" name="venue-name" id="venue-name" class="block w-full rounded-md border-0 bg-white/5 px-3.5 py-2 text-white shadow-sm ring-1 ring-inset ring-white/10 focus:ring-2 focus:ring-inset focus:ring-indigo-500 sm:text-sm sm:leading-6">
-        </div>
+    <div id="sign-in" class="px-6 pb-24 pt-20 sm:pb-32 lg:px-8 lg:py-48">
+      <div class="mt-6 grid grid-cols-1 gap-4">
+          <a href="#" id="sign-in-button" class="flex w-full items-center justify-center gap-3 rounded-md bg-white px-3 py-2 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50 focus-visible:ring-transparent">
+            <svg class="h-5 w-5 fill-[#24292F]" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+              <path fill-rule="evenodd" d="M10 0C4.477 0 0 4.484 0 10.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0110 4.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.203 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.942.359.31.678.921.678 1.856 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0020 10.017C20 4.484 15.522 0 10 0z" clip-rule="evenodd" />
+            </svg>
+            <span class="text-sm font-semibold leading-6">Sign in with GitHub</span>
+          </a>
       </div>
-      <!-- Venue Location -->
-      <div class="sm:col-span-2">
-        <label for="location" class="block text-sm font-semibold leading-6 text-white">Location</label>
-        <div class="mt-2.5">
-          <input type="text" name="location" id="location" class="block w-full rounded-md border-0 bg-white/5 px-3.5 py-2 text-white shadow-sm ring-1 ring-inset ring-white/10 focus:ring-2 focus:ring-inset focus:ring-indigo-500 sm:text-sm sm:leading-6">
+    </div>
+    <div id="form" style="display: none;">
+      <form id="venue-registration-form" class="px-6 pb-24 pt-20 sm:pb-32 lg:px-8 lg:py-48">
+        <div class="mx-auto max-w-xl lg:mr-0 lg:max-w-lg">
+          <div class="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2" >
+            <!-- Venue Name -->
+            <div class="sm:col-span-2">
+              <label for="venue-name" class="block text-sm font-semibold leading-6 text-white">Venue Name</label>
+              <div class="mt-2.5">
+                <input type="text" name="venue-name" required id="venue-name" class="block w-full rounded-md border-0 bg-white/5 px-3.5 py-2 text-white shadow-sm ring-1 ring-inset ring-white/10 focus:ring-2 focus:ring-inset focus:ring-indigo-500 sm:text-sm sm:leading-6">
+              </div>
+            </div>
+            <!-- Venue Location -->
+            <div class="sm:col-span-2">
+              <label for="location" class="block text-sm font-semibold leading-6 text-white">Location</label>
+              <div class="mt-2.5">
+                <input type="text" name="location" id="location" required class="block w-full rounded-md border-0 bg-white/5 px-3.5 py-2 text-white shadow-sm ring-1 ring-inset ring-white/10 focus:ring-2 focus:ring-inset focus:ring-indigo-500 sm:text-sm sm:leading-6">
+              </div>
+            </div>
+            <!-- Maximum Number of Participants -->
+            <div class="sm:col-span-2">
+              <label for="max-participants" class="block text-sm font-semibold leading-6 text-white">Maximum Number of Participants</label>
+              <div class="mt-2.5">
+                <input type="number" name="max-participants" id="max-participants" class="block w-full rounded-md border-0 bg-white/5 px-3.5 py-2 text-white shadow-sm ring-1 ring-inset ring-white/10 focus:ring-2 focus:ring-inset focus:ring-indigo-500 sm:text-sm sm:leading-6">
+              </div>
+            </div>
+             <!-- Primary Contact Name -->
+            <div class="sm:col-span-2">
+              <label for="primary-contact-name" class="block text-sm font-semibold leading-6 text-white">Primary Contact Name</label>
+              <div class="mt-2.5">
+                <input type="text" name="primary-contact-name"  id="primary-contact-name" class="block w-full rounded-md border-0 bg-white/5 px-3.5 py-2 text-white shadow-sm ring-1 ring-inset ring-white/10 focus:ring-2 focus:ring-inset focus:ring-indigo-500 sm:text-sm sm:leading-6">
+              </div>
+            </div>
+            <!-- Primary Email -->
+            <div>
+              <label for="primary-email" class="block text-sm font-semibold leading-6 text-white">Primary Email</label>
+              <div class="mt-2.5">
+                <input type="email" name="primary-email" id="primary-email" required class="block w-full rounded-md border-0 bg-white/5 px-3.5 py-2 text-white shadow-sm ring-1 ring-inset ring-white/10 focus:ring-2 focus:ring-inset focus:ring-indigo-500 sm:text-sm sm:leading-6">
+              </div>
+            </div>
+            <!-- Primary Phone -->
+            <div>
+              <label for="primary-phone" class="block text-sm font-semibold leading-6 text-white">Primary Phone</label>
+              <div class="mt-2.5">
+                <input type="tel" name="primary-phone" id="primary-phone" required class="block w-full rounded-md border-0 bg-white/5 px-3.5 py-2 text-white shadow-sm ring-1 ring-inset ring-white/10 focus:ring-2 focus:ring-inset focus:ring-indigo-500 sm:text-sm sm:leading-6">
+              </div>
+            </div>
+            <!-- Secondary Contact Name -->
+            <div class="sm:col-span-2">
+              <label for="secondary-contact-name" class="block text-sm font-semibold leading-6 text-white">Secondary Contact Name</label>
+              <div class="mt-2.5">
+                <input type="text" name="secondary-contact-name"  id="secondary-contact-name" class="block w-full rounded-md border-0 bg-white/5 px-3.5 py-2 text-white shadow-sm ring-1 ring-inset ring-white/10 focus:ring-2 focus:ring-inset focus:ring-indigo-500 sm:text-sm sm:leading-6">
+              </div>
+            </div>
+            <!-- Secondary Email -->
+            <div>
+              <label for="secondary-email" class="block text-sm font-semibold leading-6 text-white">Secondary Email</label>
+              <div class="mt-2.5">
+                <input type="email" name="secondary-email" id="secondary-email" class="block w-full rounded-md border-0 bg-white/5 px-3.5 py-2 text-white shadow-sm ring-1 ring-inset ring-white/10 focus:ring-2 focus:ring-inset focus:ring-indigo-500 sm:text-sm sm:leading-6">
+              </div>
+            </div>
+            <!-- Secondary Phone -->
+            <div>
+              <label for="secondary-phone" class="block text-sm font-semibold leading-6 text-white">Secondary Phone</label>
+              <div class="mt-2.5">
+                <input type="tel" name="secondary-phone" id="secondary-phone" class="block w-full rounded-md border-0 bg-white/5 px-3.5 py-2 text-white shadow-sm ring-1 ring-inset ring-white/10 focus:ring-2 focus:ring-inset focus:ring-indigo-500 sm:text-sm sm:leading-6">
+              </div>
+            </div>
+          </div>
+          <div class="mt-8 flex justify-end">
+            <button type="submit" class="rounded-md bg-indigo-500 px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-sm hover:bg-indigo-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500">Register Venue</button>
+          </div>
         </div>
-      </div>
-      <!-- Maximum Number of Participants -->
-      <div class="sm:col-span-2">
-        <label for="max-participants" class="block text-sm font-semibold leading-6 text-white">Maximum Number of Participants</label>
-        <div class="mt-2.5">
-          <input type="number" name="max-participants" id="max-participants" class="block w-full rounded-md border-0 bg-white/5 px-3.5 py-2 text-white shadow-sm ring-1 ring-inset ring-white/10 focus:ring-2 focus:ring-inset focus:ring-indigo-500 sm:text-sm sm:leading-6">
-        </div>
-      </div>
-      <!-- Primary Email -->
-      <div>
-        <label for="primary-email" class="block text-sm font-semibold leading-6 text-white">Primary Email</label>
-        <div class="mt-2.5">
-          <input type="email" name="primary-email" id="primary-email" class="block w-full rounded-md border-0 bg-white/5 px-3.5 py-2 text-white shadow-sm ring-1 ring-inset ring-white/10 focus:ring-2 focus:ring-inset focus:ring-indigo-500 sm:text-sm sm:leading-6">
-        </div>
-      </div>
-      <!-- Primary Phone -->
-      <div>
-        <label for="primary-phone" class="block text-sm font-semibold leading-6 text-white">Primary Phone</label>
-        <div class="mt-2.5">
-          <input type="tel" name="primary-phone" id="primary-phone" class="block w-full rounded-md border-0 bg-white/5 px-3.5 py-2 text-white shadow-sm ring-1 ring-inset ring-white/10 focus:ring-2 focus:ring-inset focus:ring-indigo-500 sm:text-sm sm:leading-6">
-        </div>
-      </div>
-      <!-- Secondary Contact Name -->
-      <div class="sm:col-span-2">
-        <label for="secondary-contact-name" class="block text-sm font-semibold leading-6 text-white">Secondary Contact Name</label>
-        <div class="mt-2.5">
-          <input type="text" name="secondary-contact-name" id="secondary-contact-name" class="block w-full rounded-md border-0 bg-white/5 px-3.5 py-2 text-white shadow-sm ring-1 ring-inset ring-white/10 focus:ring-2 focus:ring-inset focus:ring-indigo-500 sm:text-sm sm:leading-6">
-        </div>
-      </div>
-      <!-- Secondary Email -->
-      <div>
-        <label for="secondary-email" class="block text-sm font-semibold leading-6 text-white">Secondary Email</label>
-        <div class="mt-2.5">
-          <input type="email" name="secondary-email" id="secondary-email" class="block w-full rounded-md border-0 bg-white/5 px-3.5 py-2 text-white shadow-sm ring-1 ring-inset ring-white/10 focus:ring-2 focus:ring-inset focus:ring-indigo-500 sm:text-sm sm:leading-6">
-        </div>
-      </div>
-      <!-- Secondary Phone -->
-      <div>
-        <label for="secondary-phone" class="block text-sm font-semibold leading-6 text-white">Secondary Phone</label>
-        <div class="mt-2.5">
-          <input type="tel" name="secondary-phone" id="secondary-phone" class="block w-full rounded-md border-0 bg-white/5 px-3.5 py-2 text-white shadow-sm ring-1 ring-inset ring-white/10 focus:ring-2 focus:ring-inset focus:ring-indigo-500 sm:text-sm sm:leading-6">
+      </form>
+    </div>
+    <div id="venue-registration-success" style="display: none;">
+      <div class="px-6 pb-24 pt-20 sm:pb-32 lg:px-8 lg:py-48">
+        <div class="mx-auto max-w-xl lg:mr-0 lg:max-w-lg">
+          <div class="" >
+            <div class="mt-4 text-center">
+              <h3 class="text-3xl font-bold ">Venue Registration Successful!</h3>
+              <div class="mt-4">
+                <p class="mt-6 text-lg leading-8 text-gray-300">Thank you for registering your venue. We will be in touch with you shortly.</p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
-    <div class="mt-8 flex justify-end">
-      <button type="submit" class="rounded-md bg-indigo-500 px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-sm hover:bg-indigo-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500">Register Venue</button>
-    </div>
-  </div>
-</form>
-
   </div>
 </div>
+
 <script type="module">
   // Import the functions you need from the SDKs you need
   import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.2/firebase-app.js";
@@ -141,21 +145,34 @@ permalink: /register/
     appId: "1:1021726338520:web:ce0ba19e00b3a6ed5396ad"
   };
 
- // Initialize Firebase and Firestore
+  // Initialize Firebase and Firestore
   const app = initializeApp(firebaseConfig);
   const db = getFirestore(app);
- const auth = getAuth(app);
+  const auth = getAuth(app);
 
   // GitHub Auth Provider
   const provider = new GithubAuthProvider();
+
+  let userName  = null;
 
   // Sign in with GitHub
   document.getElementById('sign-in-button').addEventListener('click', () => {
     signInWithPopup(auth, provider)
       .then((result) => {
         // User signed in
-        console.log('User signed in:', result.user);
+        console.log('User signed in:', result);
+        userName = result.user.reloadUserInfo.screenName;
+
+          // Hide the sign-in button
+        document.getElementById('sign-in').style.display = 'none';
+
+        // Set the email from the user to the primary email field
+        document.getElementById('primary-email').value = result.user.email;
+        document.getElementById('primary-contact-name').value = result.user.displayName
+
         // Show the venue registration form
+        document.getElementById('form').style.display = 'block';
+ 
       })
       .catch((error) => {
         console.error('Authentication error:', error);
@@ -174,6 +191,7 @@ permalink: /register/
       var venueName = document.getElementById('venue-name').value;
       var location = document.getElementById('location').value;
       var maxParticipants = document.getElementById('max-participants').value;
+      var primaryContactName = document.getElementById('primary-contact-name').value;
       var primaryEmail = document.getElementById('primary-email').value;
       var primaryPhone = document.getElementById('primary-phone').value;
       var secondaryContactName = document.getElementById('secondary-contact-name').value;
@@ -186,13 +204,20 @@ permalink: /register/
           venueName: venueName,
           location: location,
           maxParticipants: maxParticipants,
+          primaryUsername: userName,
+          primaryContactName: primaryContactName,
           primaryEmail: primaryEmail,
           primaryPhone: primaryPhone,
           secondaryContactName: secondaryContactName,
           secondaryEmail: secondaryEmail,
-          secondaryPhone: secondaryPhone
+          secondaryPhone: secondaryPhone,
+          registeredAt: new Date().toISOString()
         });
         console.log('Venue registered successfully!');
+          // Hide the venue registration form
+        document.getElementById('form').style.display = 'none';
+          // Show the venue confirmation message
+        document.getElementById('venue-registration-success').style.display = 'block';
         // Handle successful submission
       } catch (error) {
         console.error('Error registering venue:', error);
