@@ -22,8 +22,15 @@ jobs:
       - name: Checkout 🛎️
         uses: actions/checkout@v4
 
-      - name: Setup Node.js ⚙️ - Cache dependencies ⚡ - Install dependencies 🔧
-        uses: ./.github/workflows/setup-node
+      - uses: ruby/setup-ruby@477b21f02be01bcb8030d50f37cfec92bfa615b6
+        with:
+         ruby-version: 2.6
+
+      - run: bundle install
+      
+      - name: Install Dependencies
+        run: |
+          npm install
 
       - name: Setup Pages ⚙️
         uses: actions/configure-pages@v4
