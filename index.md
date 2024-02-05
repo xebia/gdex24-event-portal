@@ -28,7 +28,7 @@ layout: default
               </a>
             </div>
             <h1 class="mt-10 text-4xl font-bold tracking-tight text-white sm:text-6xl">Global DevOps Experience</h1>
-            <p class="mt-6 text-lg leading-8 text-gray-300">Welcome to the "Global DevOps Experience," a unique, global event where the worlds of DevOps and DevEX converge. </p>
+            <p class="mt-6 text-lg leading-8 text-gray-300">Welcome to the <span class="font-bold tracking-tight text-white">Global DevOps Experience</span>, a unique, global event where the worlds of DevOps and DevEX converge. </p>
              <p class="mt-6 text-lg leading-8 text-gray-300">This event is designed for those intrigued by the potential of technology to transform traditional development practices into something far more dynamic by using GitHub and Azure.</p>
             <div class="mt-10 flex items-center gap-x-6">
               <a href="#more" class="rounded-md bg-indigo-500 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-400">More information</a>
