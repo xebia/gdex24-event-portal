@@ -182,10 +182,11 @@ permalink: /register/
   // Form submission handler
   document.getElementById('venue-registration-form').addEventListener('submit', async function(e) {
        e.preventDefault();
-    if (!auth.currentUser) {
-      console.error('User not authenticated');
-      return;
-    }
+
+      if (!auth.currentUser) {
+        console.error('User not authenticated');
+        return;
+      }
 
       // Get form values
       var venueName = document.getElementById('venue-name').value;
