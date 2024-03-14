@@ -28,10 +28,13 @@ layout: default
               </a>
             </div>
             <h1 class="mt-10 text-4xl font-bold tracking-tight text-white sm:text-6xl">Global DevOps Experience</h1>
-            <p class="mt-6 text-lg leading-8 text-gray-300">Welcome to the <span class="font-bold tracking-tight text-white">Global DevOps Experience</span>, a unique, global event where the worlds of DevOps and DevEX converge. </p>
-             <p class="mt-6 text-lg leading-8 text-gray-300">This event is designed for those intrigued by the potential of technology to transform traditional development practices into something far more dynamic by using GitHub and Azure.</p>
-            <div class="mt-10 flex items-center gap-x-6">
-              <a href="#more" class="rounded-md bg-indigo-500 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-400">More information</a>
+            <p class="mt-6 text-lg leading-8 text-gray-300">Welcome to the <span class="font-bold tracking-tight text-white">Global DevOps Experience</span>, a unique, global event where the worlds of DevOps, Platform Engineering and Developer Experience (DevEx) converge. </p>
+             <p class="mt-6 text-lg leading-8 text-gray-300">This event is for everyone who likes to learn how we can make software development more productive in an DevOps way of work. This one day event is designed for those intrigued by the potential of technology to transform traditional development practices into something far more dynamic by using GitHub, Azure and AI.</p>
+             <h2 class="text-center text-lg font-semibold leading-8 text-white">For Organizers
+             </h2>
+             This is an Event out of the box. This means you can organize this event for your local community on the same day. We, the organizers, provide you with everything you need to run a high value community event. We provide the presentations, the hands-on labs, the infrastructure and a fun narrative for the day. How do you organize this event? Simple, You sign up as a venue and you, the local organizer, arranges a physical venue where people can join for the event. We provide you with everything you need to sign up attendees, content for the event and all the infrastructure you need to run this event. Please sign up, provide us some basic details and we will be in touch and help you set everything up. 
+             <div class="mt-10 flex items-center gap-x-6">
+              <a href="#more" class="rounded-md bg-indigo-500 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-400">More information</a><p/>
               <a href="{{ '/register' | relative_url }}" class="text-sm font-semibold leading-6 text-white">Register your venue <span aria-hidden="true">→</span></a>
             </div>
           </div>
@@ -57,21 +60,21 @@ layout: default
         <div class="mx-auto  text-center">
           <h2 class="text-base font-semibold leading-7 text-indigo-400">What is the Global DevOps Experience</h2>
           <p class="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">The story</p>
-          <p class="mt-6 text-lg leading-8 text-gray-300 text-justify">Imagine the scenario of Company X, an industry leader whose time-tested applications have powered its operations for decades. Faced with emerging challenges and the need for innovation, Company X embarks on a journey of transformation, leveraging AI as its compass.</p>
-          <p class="mt-6 text-lg leading-8 text-gray-300 text-justify">But soon they realize that they find themselves at a turning point. It is not only about technology, it's about people, culture, and the evolution of development practices. In order to survive they will need to transition from DevOps to DevEX and the embrace of AI.</p>
+          <p class="mt-6 text-lg leading-8 text-gray-300 text-justify">You onboarded to a Company who has some mission critical applications running to sell concert tickets online. You will join their platform Engineering team and will help this company deliver new software. Faced with emerging challenges and the need for innovation, the Company embarks on a journey of transformation.</p>
+          <p class="mt-6 text-lg leading-8 text-gray-300 text-justify">Soon they realize that they find themselves at a turning point..... In order to survive they will need to go all in on DevOps, DevEX and embrace AI.</p>
         </div>
       </div>
       <!-- Stats -->
-      <!-- <div class="mx-auto mt-32 max-w-7xl px-6 sm:mt-26 lg:px-8">
+      <div class="mx-auto mt-32 max-w-7xl px-6 sm:mt-26 lg:px-8">
         <div class="mx-auto max-w-2xl lg:mx-0 lg:max-w-xl">
           <h2 class="text-base font-semibold leading-8 text-indigo-400">Our track record</h2>
-          <p class="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">Trusted by thousands of developers&nbsp;worldwide</p>
-          <p class="mt-6 text-lg leading-8 text-gray-300">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.</p>
+          <p class="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">Our past events include the Global DevOps Bootcamps in 2017, 2018 and 2019, where we delighted over 10.000 developers all across the globe in 35 countries and 90 different venues.</p>
+          <p class="mt-6 text-lg leading-8 text-gray-300">We organize this event in close cooperation with GitHub, Microsoft and Xebia</p>
         </div>
         <dl class="mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-10 text-white sm:mt-20 sm:grid-cols-2 sm:gap-y-16 lg:mx-0 lg:max-w-none lg:grid-cols-4">
           <div class="flex flex-col gap-y-3 border-l border-white/10 pl-6">
             <dt class="text-sm leading-6">Developers on the platform</dt>
-            <dd class="order-first text-3xl font-semibold tracking-tight">8,000+</dd>
+            <dd class="order-first text-3xl font-semibold tracking-tight">10,000+</dd>
           </div>
           <div class="flex flex-col gap-y-3 border-l border-white/10 pl-6">
             <dt class="text-sm leading-6">Daily requests</dt>
@@ -81,12 +84,8 @@ layout: default
             <dt class="text-sm leading-6">Uptime guarantee</dt>
             <dd class="order-first text-3xl font-semibold tracking-tight">99.9%</dd>
           </div>
-          <div class="flex flex-col gap-y-3 border-l border-white/10 pl-6">
-            <dt class="text-sm leading-6">Projects deployed</dt>
-            <dd class="order-first text-3xl font-semibold tracking-tight">12m</dd>
-          </div>
         </dl>
-      </div> -->
+      </div>
       <!-- CTA section -->
       <div class="relative isolate mt-4 px-6 py-32 sm:mt-16 sm:py-40 lg:px-8">
         <svg class="absolute inset-0 -z-10 h-full w-full stroke-white/10 [mask-image:radial-gradient(100%_100%_at_top_right,white,transparent)]" aria-hidden="true">
@@ -105,12 +104,10 @@ layout: default
         </div>
         <div class="mx-auto max-w-7xl text-center px-6 sm:mt-26 lg:px-8">
           <h2 class="text-3xl font-bold tracking-tight text-white sm:text-4xl">Join the DevOps Experience<br>Host a venue!</h2>
-          <p class="mx-auto mt-6  text-lg leading-8 text-justify text-gray-300">The Global DevOps Experience is more than an event; it's an opportunity to engage with the forefront of AI in development using Azure. Whether you're a developer keen on mastering new tools, a leader seeking to drive change in your organization, or simply curious about the future of technology, this experience is designed to provide valuable insights and practical knowledge.</p>
           <p class="mx-auto mt-6  text-lg leading-8 text-justify text-gray-300">
-The "Global DevOps Experience" invites you to be part of this evolving story, where technology meets practicality, and where every challenge is a stepping stone to innovation. Join us as we pave the way for a future where Company X not only navigates its trials but thrives through them. This is an opportunity to engage with like-minded individuals and be part of shaping the future of development practices.</p>
+The "Global DevOps Experience" invites you to be part of this evolving story, where technology meets practicality, and where every challenge is a stepping stone to innovation. Join us as and host a venueso you can be part of this experience en be at the forefront of your local community </p>
           <div class="mt-10 flex items-center justify-center gap-x-6">
             <a href="{{ '/register' | relative_url }}" class="rounded-md bg-white px-3.5 py-2.5 text-sm font-semibold text-gray-900 shadow-sm hover:bg-gray-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white">Register your venue</a>
-            <a href="#more" class="text-sm font-semibold leading-6 text-white">Learn more <span aria-hidden="true">→</span></a>
           </div>
         </div>
       </div>
