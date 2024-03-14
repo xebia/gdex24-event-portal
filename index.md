@@ -37,7 +37,7 @@ layout: default
             </div>
           </div>
           <div class="mx-auto mt-16 flex max-w-2xl sm:mt-24 lg:ml-10 lg:mr-0 lg:mt-0 lg:max-w-none lg:flex-none xl:ml-32">
-            <img class="h-120" src="images/Logo-trans.png" alt="Global DevOps Experience">
+            <img class="h-120" width="33%" src="images/Logo-trans.png" alt="Global DevOps Experience">
             <!-- <div class="max-w-3xl flex-none sm:max-w-5xl lg:max-w-none" id="globeContainer">               
             </div> -->
           </div>
