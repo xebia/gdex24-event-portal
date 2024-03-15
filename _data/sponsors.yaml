@@ -1,3 +1,9 @@
 - name: Xebia
   url: https://xebia.com
   logo: /images/xebia.png
+- name: GitHub
+  url: https://github.com
+  logo: /images/GitHub_Logo_white.png
+- name: Microsoft
+  url: https://microsoft.com
+  logo: /images/microsoft-logo-black-and-white.png

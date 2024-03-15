@@ -46,7 +46,7 @@ layout: default
       <!-- Logo cloud -->
       <div class="mx-auto mt-8 max-w-7xl px-6 sm:mt-16 lg:px-8">
         <h2 class="text-center text-lg font-semibold leading-8 text-white">This event is sponsored by</h2>
-        <div class="mx-auto mt-10 grid max-w-lg grid-cols-2 items-center gap-x-8 gap-y-10 sm:max-w-xl sm:grid-cols-2 sm:gap-x-10 lg:mx-0 lg:max-w-none lg:grid-cols-2">
+        <div class="mx-auto mt-10 grid max-w-lg grid-cols-3 items-center gap-x-8 gap-y-10 sm:max-w-xl sm:grid-cols-2 sm:gap-x-10 lg:mx-0 lg:max-w-none lg:grid-cols-3">
           <!-- Loop through the site.data.sponsors -->
           {% for sponsor in site.data.sponsors %}
           <img class="col-span-2 max-h-12 w-full object-contain lg:col-span-1" src="{{ sponsor.logo }}" alt="{{ sponsor.name }}" width="158" height="48">
