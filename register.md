@@ -119,7 +119,7 @@ permalink: /register/
             <div class="mt-4 text-center">
               <h3 class="text-3xl font-bold ">Venue Registration Successful!</h3>
               <div class="mt-4">
-                <p class="mt-6 text-lg leading-8 text-gray-300">Thank you for registering your venue. We will be in touch with you shortly.</p>
+                <p class="mt-6 text-lg leading-8 text-gray-300">Thank you for registering your venue. We will be in touch with you shortly by inviting you to our GitHub repo, so check your notifications. </p>
               </div>
             </div>
           </div>
