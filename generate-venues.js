@@ -49,10 +49,10 @@ async function main() {
   primaryUsername: "${venue.primaryUsername}"
   secondaryContactName: "${venue.secondaryContactName}"
   secondaryUsername: "${venue.secondaryUsername}"
-  ---`;
+---`;
   
         // Output the markdown to the console
-        console.log(frontmatter);
+       // console.log(frontmatter);
 
         // Write the frontmatter to a new markdown file
         fs.writeFileSync(path.join('_venues', `${slug}.md`), frontmatter);
