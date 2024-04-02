@@ -45,6 +45,10 @@ async function main() {
   location: ${venue.location}
   maxParticipants: ${venue.maxParticipants}
   registeredAt: ${venue.registeredAt}
+  primaryContactName: ${venue.primaryContactName}
+  primaryUsername: ${venue.primaryUsername}
+  secondaryContactName: ${venue.secondaryContactName}
+  secondaryUsername: ${venue.secondaryUsername}
   ---`;
   
         // Write the frontmatter to a new markdown file
