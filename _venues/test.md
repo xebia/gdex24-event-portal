@@ -1,5 +1,5 @@
 ---
-name: Test Venue
+venueName: Test Venue
 location: Test Location
 primaryContactName: Michiel
 primaryUsername: mivano
