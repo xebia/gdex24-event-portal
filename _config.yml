@@ -47,6 +47,22 @@ postcss:
 # their entries' file path in the `include:` list.
 #
 
+defaults:
+  - scope:
+      path: ""
+      type: "venues"
+    values:
+      layout: "venue"
+  - scope:
+      path: "_pages"
+      type: pages
+    values:
+      layout: default
+
+collections:
+  venues:
+    output: true
+    permalink: /:collection/:name 
 
 exclude: [
   styles/index.css,

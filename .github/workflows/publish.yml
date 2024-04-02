@@ -27,7 +27,13 @@ jobs:
          ruby-version: 2.6
 
       - run: bundle install
+
       
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '20'  # Set your Node.js version
+
       - name: Install Dependencies
         run: |
           npm install
@@ -38,7 +44,11 @@ jobs:
           static_site_generator: jekyll
       
       - name: Build
-        run: JEKYLL_ENV=production bundle exec jekyll build
+        run: |
+          node generate-venues.js
+          JEKYLL_ENV=production bundle exec jekyll build
+        env:
+          FIREBASE_SERVICE_ACCOUNT: ${{ secrets.FIREBASE_SERVICE_ACCOUNT }}
 
       - name: Upload artifact 📡
         uses: actions/upload-pages-artifact@v3
