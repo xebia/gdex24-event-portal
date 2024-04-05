@@ -23,7 +23,7 @@
   "dependencies": {
     "@tailwindcss/typography": "github:tailwindcss/typography",
     "concurrently": "^7.0.0",
-    "firebase-admin": "^10.0.0",
+    "firebase-admin": "^10.3.0",
     "slugify": "^1.6.6"
   }
 }
