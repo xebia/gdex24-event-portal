@@ -62,28 +62,29 @@ layout: default
           <p class="mt-6 text-lg leading-8 text-gray-300 text-justify">Soon, they realize that they find themselves at a turning point..... In order to survive, they will need to go all in on DevOps and DevEX and embrace AI.</p>
         </div>
       </div>
-      <!-- Stats -->
-      <!-- <div class="mx-auto mt-32 max-w-7xl px-6 sm:mt-26 lg:px-8">
+      <!-- Current venues -->
+       <div class="mx-auto mt-32 max-w-7xl px-6 sm:mt-26 lg:px-8">
         <div class="mx-auto max-w-2xl lg:mx-0 lg:max-w-xl">
-          <h2 class="text-base font-semibold leading-8 text-indigo-400">Our track record</h2>
-          <p class="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">Trusted by thousands of developers&nbsp;worldwide</p>
-          <p class="mt-6 text-lg leading-8 text-gray-300">Our past events include the Global DevOps Bootcamps in 2017, 2018, and 2019, where we delighted over 10.000 developers all across the globe in 35 countries and 90 different venues.</p>
+          <h2 class="text-base font-semibold leading-8 text-indigo-400">Already registered venues</h2>
+          <p class="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">This list of venues is just a start...</p>
+          <p class="mt-6 text-lg leading-8 text-gray-300">make sure to register your own as well!</p>
         </div>
         <dl class="mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-10 text-white sm:mt-20 sm:grid-cols-2 sm:gap-y-16 lg:mx-0 lg:max-w-none lg:grid-cols-4">
-          <div class="flex flex-col gap-y-3 border-l border-white/10 pl-6">
-            <dt class="text-sm leading-6">Developers on the platform</dt>
-            <dd class="order-first text-3xl font-semibold tracking-tight">10,000+</dd>
-          </div>
-          <div class="flex flex-col gap-y-3 border-l border-white/10 pl-6">
-            <dt class="text-sm leading-6">Daily requests</dt>
-            <dd class="order-first text-3xl font-semibold tracking-tight">900m+</dd>
-          </div>
-          <div class="flex flex-col gap-y-3 border-l border-white/10 pl-6">
-            <dt class="text-sm leading-6">Uptime guarantee</dt>
-            <dd class="order-first text-3xl font-semibold tracking-tight">99.9%</dd>
-          </div>
+          {% for venue in site.venues %}
+            {% if venue.isShown %}
+              <div class="flex flex-col gap-y-3 border-l border-white/10 pl-6">
+                {% if venue.location.city != "" %}
+                  <dt class="text-sm leading-6">{{ venue.location.city }} @ {{ venue.location.country }}</dt>
+                {% else %}
+                  <dt class="text-sm leading-6">{{ venue.location.address }}</dt>
+                {% endif %}
+                <dd class="order-first text-2xl font-semibold tracking-tight">{{ venue.venueName }}</dd>
+              </div>
+            {% endif %}
+          {% endfor %}
         </dl>
-      </div> -->
+      </div> 
+
       <!-- CTA section -->
       <div class="relative isolate mt-4 px-6 py-32 sm:mt-16 sm:py-40 lg:px-8">
         <svg class="absolute inset-0 -z-10 h-full w-full stroke-white/10 [mask-image:radial-gradient(100%_100%_at_top_right,white,transparent)]" aria-hidden="true">
@@ -109,6 +110,9 @@ layout: default
           </div>
         </div>
       </div>
+
+
+
     </main>
   
   

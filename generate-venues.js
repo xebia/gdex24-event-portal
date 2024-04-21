@@ -2,12 +2,12 @@ const admin = require('firebase-admin');
 const fs = require('fs');
 const slugify = require('slugify');
 const path = require('path');
+require('dotenv').config();
 
 const firebaseConfig = {
   // Your Firebase project configuration
 };
 
-const githubToken = process.env.GITHUB_TOKEN; // Make sure to set this in your GitHub Secrets
 const serviceAccount = JSON.parse(process.env.FIREBASE_SERVICE_ACCOUNT);
 
 // Initialize Firebase Admin SDK
@@ -16,11 +16,6 @@ admin.initializeApp({
 });
 
 const db = admin.firestore();
-
-const repositoryDetails = {
-  owner: process.env.GITHUB_REPOSITORY_OWNER,
-  repo: "gdex-2024",
-};
 
   
 async function main() {
@@ -39,17 +34,31 @@ async function main() {
         // Create a slug from the venue name
         const slug = slugify(venue.venueName, { lower: true });
   
+        var content = venue.__content;
+
+        // replace the /n with newlines in the content
+        content = content.replace(/\\n/g, '\n');
+
         // Create the frontmatter
         const frontmatter = `---
   venueName: "${venue.venueName}"
-  location: "${venue.location}"
+  location:
+    address: ${venue.location.address}
+    city: "${venue.location.city}"
+    country: "${venue.location.country}"
+    latitude: ${venue.location.latitude}
+    longitude: ${venue.location.longitude}
   maxParticipants: ${venue.maxParticipants}
-  registeredAt: "${venue.registeredAt}"
   primaryContactName: "${venue.primaryContactName}"
   primaryUsername: "${venue.primaryUsername}"
   secondaryContactName: "${venue.secondaryContactName}"
   secondaryUsername: "${venue.secondaryUsername}"
----`;
+  proctors: ${JSON.stringify(venue.proctors)}
+  canSignup: false
+  isShown: ${venue.isShown}
+---
+${content}
+`;
   
         // Output the markdown to the console
        // console.log(frontmatter);
