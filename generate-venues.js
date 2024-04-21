@@ -20,9 +20,15 @@ const db = admin.firestore();
   
 async function main() {
     try {
-      // Clean the _venues folder
-      fs.rmdirSync('_venues', { recursive: true });
-      fs.mkdirSync('_venues');
+     // Clean the _venues folder
+      if (fs.existsSync('_venues')) {
+        fs.rmdirSync('_venues', { recursive: true });
+      }
+
+      // Create the _venues folder if it doesn't exist
+      if (!fs.existsSync('_venues')) {
+        fs.mkdirSync('_venues');
+      }
   
       // Fetch the venues from Firebase
       const venuesSnapshot = await db.collection('venues').get();
