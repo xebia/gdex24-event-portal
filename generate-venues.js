@@ -36,15 +36,20 @@ async function main() {
       // Generate a markdown file for each venue
       venuesSnapshot.forEach((doc) => {
         const venue = doc.data();
-  
+  //console.log(venue);
         // Create a slug from the venue name
         const slug = slugify(venue.venueName, { lower: true });
   
         var content = venue.__content;
 
-        // replace the /n with newlines in the content
-        content = content.replace(/\\n/g, '\n');
-
+        // Check if content exists
+        if (content) {
+          // replace the /n with newlines in the content
+          content = content.replace(/\\n/g, '\n');
+        } else {
+          // Set content to an empty string if it doesn't exist
+          content = '';
+        }
         // Create the frontmatter
         const frontmatter = `---
   venueName: "${venue.venueName}"
