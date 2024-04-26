@@ -19,30 +19,30 @@ layout: default
         </svg>
         <div class="absolute left-[calc(50%-4rem)] top-10 -z-10 transform-gpu blur-3xl sm:left-[calc(50%-18rem)] lg:left-48 lg:top-[calc(50%-30rem)] xl:left-[calc(50%-24rem)]" aria-hidden="true">
           <div class="aspect-[1108/632] w-[69.25rem] bg-gradient-to-r from-[#80caff] to-[#4f46e5] opacity-20" style="clip-path: polygon(73.6% 51.7%, 91.7% 11.8%, 100% 46.4%, 97.4% 82.2%, 92.5% 84.9%, 75.7% 64%, 55.3% 47.5%, 46.5% 49.4%, 45% 62.9%, 50.3% 87.2%, 21.3% 64.1%, 0.1% 100%, 5.4% 51.1%, 21.4% 63.9%, 58.9% 0.2%, 73.6% 51.7%)"></div>
+          </div>
         </div>
-        <div class="mx-auto max-w-7xl px-6 pb-24 pt-10 sm:pb-40 lg:flex lg:px-8 lg:pt-40">
-          <div class="mx-auto max-w-2xl flex-shrink-0 lg:mx-0 lg:max-w-xl lg:pt-8">           
+        <div class="mx-auto max-w-7xl px-6 pb-24 pt-10 sm:pb-40 lg:flex lg:px-8 ">
+          <div class="mx-auto max-w-2xl flex-shrink-0 lg:mx-0 lg:max-w-xl lg:pt-8">   
+          <img src="images/Logo-trans Small.png" alt="GDEX">        
             <div class="mt-24 sm:mt-32 lg:mt-16">
               <a href="#" class="inline-flex space-x-6">
                 <span class="rounded-full bg-indigo-500/10 px-3 py-1 text-xl font-semibold leading-6 text-indigo-400 ring-1 ring-inset ring-indigo-500/20">15 June, 2024</span>                
               </a>
             </div>
-            <h1 class="mt-10 text-4xl font-bold tracking-tight text-white sm:text-6xl">Global DevOps Experience</h1>
-            <p class="mt-6 text-lg leading-8 text-gray-300">Welcome to the <span class="font-bold tracking-tight text-white">Global DevOps Experience</span>,&nbsp;a unique, global event where the worlds of DevOps, Platform Engineering, and Developer Experience (DevEx) converge. </p>
-             <p class="mt-6 text-lg leading-8 text-gray-300">This event is for everyone who likes to learn how we can make software development more productive in a DevOps way of work. This one-day event, on <time datetime="2024-06-15">15th of June</time>, is designed for those intrigued by the potential of technology to transform traditional development practices into something far more dynamic by using GitHub, Azure, and AI.</p>
-             <p class="mt-6 text-lg leading-8 text-gray-300">This is an Event out of the box. This means you can organize this event for your local community on the same day. We, the organizers, provide you with everything you need to run a high-value community event. We provide the presentations, the hands-on labs, the infrastructure, and a fun narrative for the day. How do you organize this event? Simple: You sign up as a venue, and you, the local organizer, arrange a physical venue where people can join for the event. We provide you with everything you need to sign up attendees, content for the event, and all the infrastructure you need to run this event. Please sign up and provide us with some basic details, and we will be in touch to help you set everything up.</p>
+            <h1 class="mt-10 text-4xl font-bold tracking-tight text-white sm:text-6xl">Join the Global DevOps Experience om June 15 2024!</h1>
+            <p class="mt-6 text-lg leading-8 text-gray-300">Welcome to the <span class="font-bold tracking-tight text-white">Global DevOps Experience</span>, a unique, global event where the worlds of DevOps, Platform Engineering, and Developer Experience (DevEx) come together. </p>
+             <p class="mt-6 text-lg leading-8 text-gray-300">This one-day event will be hosted by many venues all over the world and is more than an event. It is an experience. You will be part of a team in a fictious company, Globoticket, and help them to overcome some difficult and relevant challenges in the field of Platform Engineering, DevOps and Software Development. The event is centered around GitHub and Azure and AI and is the first global GitHub community event!</p>
             <div class="mt-10 flex items-center gap-x-6">
-              <a href="#more" class="rounded-md bg-indigo-500 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-400">More information</a>
+              <a href="#participants" class="rounded-md bg-indigo-500 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-400">Register as participant</a>
               <a href="{{ '/register' | relative_url }}" class="text-sm font-semibold leading-6 text-white">Register your venue <span aria-hidden="true">→</span></a>
             </div>
           </div>
-          <div class="mx-auto mt-16 flex max-w-2xl sm:mt-24 lg:ml-10 lg:mr-0 lg:mt-0 lg:max-w-none lg:flex-none">
-            <img class="h-120" width="33%" src="images/Logo-trans.png" alt="Global DevOps Experience">
-            <!-- <div class="max-w-3xl flex-none sm:max-w-5xl lg:max-w-none" id="globeContainer">               
-            </div> -->
+          <div class="mx-auto mt-16 flex max-w-2xl sm:mt-24 lg:ml-10 lg:mr-0 lg:mt-0 lg:max-w-none lg:flex-none xl:ml-32">
+            <div class="max-w-3xl flex-none sm:max-w-5xl lg:max-w-none">
+               <div id="globeViz"  class="w-[76rem]"></div>
+            </div>
           </div>
         </div> 
-      </div>
       <!-- Logo cloud -->
       <div class="mx-auto mt-8 max-w-7xl px-6 sm:mt-16 lg:px-8">
         <h2 class="text-center text-lg font-semibold leading-8 text-white">This event is sponsored by</h2>
@@ -56,18 +56,20 @@ layout: default
       <!-- Feature section -->
       <div class="mx-auto mt-32 max-w-7xl px-6 sm:mt-26 lg:px-8" id="more">
         <div class="mx-auto  text-center">
-          <h2 class="text-base font-semibold leading-7 text-indigo-400">What is the Global DevOps Experience</h2>
+          <h2 class="text-base font-semibold leading-7 text-indigo-400">What is the GDEX</h2>
           <p class="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">The story</p>
-          <p class="mt-6 text-lg leading-8 text-gray-300 text-justify">You were onboarded to a Company that has some mission-critical applications running to sell concert tickets online. You will join their platform Engineering team to help this company deliver new software. Faced with emerging challenges and the need for innovation, the Company embarks on a transformation journey.</p>
-          <p class="mt-6 text-lg leading-8 text-gray-300 text-justify">Soon, they realize that they find themselves at a turning point..... In order to survive, they will need to go all in on DevOps and DevEX and embrace AI.</p>
+          <p class="mt-6 text-lg leading-8 text-gray-300 text-justify">In 2017 the makers of GDEX created the <a href="https://globaldevopsbootcamp.com">Global DevOps Bootcamp</a> which was held in 2019 for the last time. In 2019 GDBC had 10.000 people joining the event in 92 venues in 32 countries all over the world. A true global community event. 
+          </p>
+          <p class="mt-6 text-lg leading-8 text-gray-300 text-justify">The Global DevOps experience follows a similar concept. The Global DevOps Experience is an "Event out of the box" and follows the sun. We will start in New Zealand and will end the event 36 hours later in Seattle. This means you can join anywhere and get the same experience! 
+          </p>
         </div>
       </div>
       <!-- Current venues -->
-       <div class="mx-auto mt-32 max-w-7xl px-6 sm:mt-26 lg:px-8">
-        <div class="mx-auto max-w-2xl lg:mx-0 lg:max-w-xl">
-          <h2 class="text-base font-semibold leading-8 text-indigo-400">Already registered venues</h2>
-          <p class="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">This list of venues is just a start...</p>
-          <p class="mt-6 text-lg leading-8 text-gray-300">make sure to register your own as well!</p>
+       <div class="mx-auto mt-32 max-w-7xl px-6 sm:mt-26 lg:px-8" id="participants">
+        <div class="mx-auto lg:mx-0 ">
+          <!-- <h2 class="text-base font-semibold leading-8 text-indigo-400">Already registered venues</h2> -->
+          <p class="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">How do I participate!</p>
+          <p class="mt-6 text-lg leading-8 text-gray-300">On this page you can find a list of all venues that are registered around the world. Find a venue nearby and sign up at this venue to join the event! Don't see a venue nearby? Find a local DevOps community and ask them to host the event, or <a href="register" class="text-sm font-semibold leading-6 text-white">host</a> an event yourself.</p>
         </div>
         <dl class="mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-10 text-white sm:mt-20 sm:grid-cols-2 sm:gap-y-16 lg:mx-0 lg:max-w-none lg:grid-cols-4">
           {% for venue in site.venues %}
@@ -102,8 +104,9 @@ layout: default
           <div class="aspect-[1108/632] w-[69.25rem] flex-none bg-gradient-to-r from-[#80caff] to-[#4f46e5] opacity-20" style="clip-path: polygon(73.6% 51.7%, 91.7% 11.8%, 100% 46.4%, 97.4% 82.2%, 92.5% 84.9%, 75.7% 64%, 55.3% 47.5%, 46.5% 49.4%, 45% 62.9%, 50.3% 87.2%, 21.3% 64.1%, 0.1% 100%, 5.4% 51.1%, 21.4% 63.9%, 58.9% 0.2%, 73.6% 51.7%)"></div>
         </div>
         <div class="mx-auto max-w-7xl text-center px-6 sm:mt-26 lg:px-8">
-          <h2 class="text-3xl font-bold tracking-tight text-white sm:text-4xl">Join the DevOps Experience<br>Host a venue!</h2>
-          <p class="mx-auto mt-6  text-lg leading-8 text-justify text-gray-300">The "Global DevOps Experience" invites you to be part of this evolving story, where technology meets practicality and where every challenge is a stepping stone to innovation. Join us as and host a venue so you can be part of this experience and be at the forefront of your local community.</p>
+          <h2 class="text-3xl font-bold tracking-tight text-white sm:text-4xl">What do I need to do to host a venue</h2>
+          <p class="mx-auto mt-6  text-lg leading-8 text-justify text-gray-300">Well, since GDEX is an event-out-of-the-box, you need to arrange a venue, some lunch and some people with a community ❤️ that can help proctoring GitHub, Azure and the challenges. Don't worry! We, the organizers, provide you, the local venue, with everything you need to run a high-value community event. We provide the presentations, the hands-on labs, the infrastructure, and a fun narrative for the day. We also provide instructions around the challenges and how to proctor these. 
+ Interested? Please sign up and provide us with some basic details, and we will be in touch to help you set everything up.</p>
           <div class="mt-10 flex items-center justify-center gap-x-6">
             <a href="{{ '/register' | relative_url }}" class="rounded-md bg-white px-3.5 py-2.5 text-sm font-semibold text-gray-900 shadow-sm hover:bg-gray-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white">Register your venue</a>
             <a href="#more" class="text-sm font-semibold leading-6 text-white">Learn more <span aria-hidden="true">→</span></a>
@@ -117,7 +120,67 @@ layout: default
   
   
   </div>
-  
+  <script>
+
+  const COUNTRY = 'United States';
+  const OPACITY = 0.9;
+
+  const N = 10;
+ {% assign maxR = "20" %}
+{% assign propagationSpeed = "20" %}
+{% assign repeatPeriod = "2000"  %}
+
+    const gData = [
+   {% for venue in site.venues %}
+  {% assign lat = venue.location.latitude | plus: 0 %}
+  {% assign lng = venue.location.longitude | plus: 0 %}
+  {% if lat and lng %}
+    {
+      name: '{{ venue.venueName }}',
+      url: '{{ venue.url }}',
+      lat: {{ lat }},
+      lng: {{ lng }},
+      maxR: {{ maxR }},
+      propagationSpeed: {{ propagationSpeed }},
+      repeatPeriod: {{ repeatPeriod }}
+    },
+  {% endif %}
+{% endfor %}
+    ];
+ 
+
+    const colorInterpolator = t => `rgba(255,100,50,${Math.sqrt(1-t)})`;
+
+  const myGlobe = Globe()
+    (document.getElementById('globeViz'))
+
+   // .globeImageUrl('images/worldmap.png')
+    .globeImageUrl('//unpkg.com/three-globe/example/img/earth-blue-marble.jpg')
+    .pointOfView({ lat: 43.653225, lng: -79.383186, altitude: 1 }) // aim at continental US centroid
+    .showGraticules(false)
+    .showAtmosphere(true)
+    .backgroundColor('rgba(0,0,0,0)')
+    .showGlobe(true)
+    .ringsData(gData)
+    .ringColor(() => colorInterpolator)
+    .ringMaxRadius('maxR')
+    .ringPropagationSpeed('propagationSpeed')
+    .ringRepeatPeriod('repeatPeriod')
+    .labelsData(gData)
+    .labelLat(d => d.lat)
+    .labelLng(d => d.lng)
+    .labelText(d => d.name)
+   // .labelSize(d => Math.sqrt(d.properties.pop_max) * 4e-4)
+    //.labelDotRadius(d => Math.sqrt(d.properties.pop_max) * 4e-4)
+    .labelColor(() => 'rgba(255, 165, 0, 0.75)')
+    .labelResolution(2);
+
+    myGlobe.controls().autoRotate = true;
+    myGlobe.controls().autoRotateSpeed = 1.8;
+    myGlobe.controls().enableZoom = true;
+
+   
+</script>
   <!-- <script src="//unpkg.com/three"></script>
 <!-- <script src="{{ '/assets/js/TrackballControls.js' | relative_url }}"></script> 
 <script src="//unpkg.com/three-globe"></script>
