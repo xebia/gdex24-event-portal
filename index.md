@@ -21,15 +21,15 @@ layout: default
           <div class="aspect-[1108/632] w-[69.25rem] bg-gradient-to-r from-[#80caff] to-[#4f46e5] opacity-20" style="clip-path: polygon(73.6% 51.7%, 91.7% 11.8%, 100% 46.4%, 97.4% 82.2%, 92.5% 84.9%, 75.7% 64%, 55.3% 47.5%, 46.5% 49.4%, 45% 62.9%, 50.3% 87.2%, 21.3% 64.1%, 0.1% 100%, 5.4% 51.1%, 21.4% 63.9%, 58.9% 0.2%, 73.6% 51.7%)"></div>
           </div>
         </div>
-        <div class="mx-auto max-w-7xl px-6 pb-24 pt-10 sm:pb-40 lg:flex lg:px-8 ">
-          <div class="mx-auto max-w-2xl flex-shrink-0 lg:mx-0 lg:max-w-xl lg:pt-8">   
+        <div class="mx-auto max-w-7xl px-6 pb-24 sm:pb-40 lg:flex lg:px-8 ">
+          <div class="mx-auto max-w-2xl flex-shrink-0 lg:mx-0  lg:pt-8">   
           <img src="images/Logo-trans Small.png" alt="GDEX">        
             <div class="mt-24 sm:mt-32 lg:mt-16">
               <a href="#" class="inline-flex space-x-6">
                 <span class="rounded-full bg-indigo-500/10 px-3 py-1 text-xl font-semibold leading-6 text-indigo-400 ring-1 ring-inset ring-indigo-500/20">15 June, 2024</span>                
               </a>
             </div>
-            <h1 class="mt-10 text-4xl font-bold tracking-tight text-white sm:text-6xl">Join the Global DevOps Experience om June 15 2024!</h1>
+            <h1 class="mt-10 text-4xl font-bold tracking-tight text-white sm:text-6xl">Join the Global DevOps Experience on June 15,&nbsp;2024!</h1>
             <p class="mt-6 text-lg leading-8 text-gray-300">Welcome to the <span class="font-bold tracking-tight text-white">Global DevOps Experience</span>, a unique, global event where the worlds of DevOps, Platform Engineering, and Developer Experience (DevEx) come together. </p>
              <p class="mt-6 text-lg leading-8 text-gray-300">This one-day event will be hosted by many venues all over the world and is more than an event. It is an experience. You will be part of a team in a fictious company, Globoticket, and help them to overcome some difficult and relevant challenges in the field of Platform Engineering, DevOps and Software Development. The event is centered around GitHub and Azure and AI and is the first global GitHub community event!</p>
             <div class="mt-10 flex items-center gap-x-6">
