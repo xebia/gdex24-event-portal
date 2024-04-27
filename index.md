@@ -71,22 +71,8 @@ layout: default
           <p class="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">How do I participate!</p>
           <p class="mt-6 text-lg leading-8 text-gray-300">On this page you can find a list of all venues that are registered around the world. Find a venue nearby and sign up at this venue to join the event! Don't see a venue nearby? Find a local DevOps community and ask them to host the event, or <a href="register" class="text-sm font-semibold leading-6 text-white">host</a> an event yourself.</p>
         </div>
-        <dl class="mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-10 text-white sm:mt-20 sm:grid-cols-2 sm:gap-y-16 lg:mx-0 lg:max-w-none lg:grid-cols-4">
-          {% for venue in site.venues %}
-            {% if venue.isShown %}
-              <div class="flex flex-col gap-y-3 border-l border-white/10 pl-6">
-                {% if venue.location.city != "" %}
-                  <dt class="text-sm leading-6">{{ venue.location.city }} @ {{ venue.location.country }}</dt>
-                {% else %}
-                  <dt class="text-sm leading-6">{{ venue.location.address }}</dt>
-                {% endif %}
-                <dd class="order-first text-2xl font-semibold tracking-tight">{{ venue.venueName }}</dd>
-              </div>
-            {% endif %}
-          {% endfor %}
-        </dl>
+        <div id="map" class="mt-8" style="height: 680px;"></div>
       </div> 
-
       <!-- CTA section -->
       <div class="relative isolate mt-4 px-6 py-32 sm:mt-16 sm:py-40 lg:px-8">
         <svg class="absolute inset-0 -z-10 h-full w-full stroke-white/10 [mask-image:radial-gradient(100%_100%_at_top_right,white,transparent)]" aria-hidden="true">
@@ -105,7 +91,8 @@ layout: default
         </div>
         <div class="mx-auto max-w-7xl text-center px-6 sm:mt-26 lg:px-8">
           <h2 class="text-3xl font-bold tracking-tight text-white sm:text-4xl">What do I need to do to host a venue</h2>
-          <p class="mx-auto mt-6  text-lg leading-8 text-justify text-gray-300">Well, since GDEX is an event-out-of-the-box, you need to arrange a venue, some lunch and some people with a community ❤️ that can help proctoring GitHub, Azure and the challenges. Don't worry! We, the organizers, provide you, the local venue, with everything you need to run a high-value community event. We provide the presentations, the hands-on labs, the infrastructure, and a fun narrative for the day. We also provide instructions around the challenges and how to proctor these. 
+          <p class="mx-auto mt-6  text-lg leading-8 text-justify text-gray-300">Well, since GDEX is an event-out-of-the-box, you need to arrange a venue, some lunch and some people with a community ❤️ that can help proctoring GitHub, Azure and the challenges. Don't worry! We, the organizers, provide you, the local venue, with everything you need to run a high-value community event. We provide the presentations, the hands-on labs, the infrastructure, and a fun narrative for the day. We also provide instructions around the challenges and how to proctor these. </p>
+          <p class="mx-auto mt-6  text-lg leading-8 text-justify text-gray-300">
  Interested? Please sign up and provide us with some basic details, and we will be in touch to help you set everything up.</p>
           <div class="mt-10 flex items-center justify-center gap-x-6">
             <a href="{{ '/register' | relative_url }}" class="rounded-md bg-white px-3.5 py-2.5 text-sm font-semibold text-gray-900 shadow-sm hover:bg-gray-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white">Register your venue</a>
@@ -113,20 +100,11 @@ layout: default
           </div>
         </div>
       </div>
-
-
-
     </main>
-  
-  
   </div>
   <script>
 
-  const COUNTRY = 'United States';
-  const OPACITY = 0.9;
-
-  const N = 10;
- {% assign maxR = "20" %}
+{% assign maxR = "20" %}
 {% assign propagationSpeed = "20" %}
 {% assign repeatPeriod = "2000"  %}
 
@@ -173,15 +151,28 @@ layout: default
    // .labelSize(d => Math.sqrt(d.properties.pop_max) * 4e-4)
     //.labelDotRadius(d => Math.sqrt(d.properties.pop_max) * 4e-4)
     .labelColor(() => 'rgba(255, 165, 0, 0.75)')
-    .labelResolution(2);
+    .labelResolution(2); 
 
     myGlobe.controls().autoRotate = true;
     myGlobe.controls().autoRotateSpeed = 1.8;
     myGlobe.controls().enableZoom = true;
 
-   
+   // Map
+   var map = L.map('map').setView([51.505, -0.09], 2); 
+   L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    maxZoom: 19,
+    attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+    }).addTo(map);
+
+    // Add markers for each venue
+    for (var i = 0; i < gData.length; i++) {
+      var venue = gData[i];
+      var marker = L.marker([venue.lat, venue.lng], {title: venue.name});
+      
+      // Bind a popup with the venue's name and URL to the marker
+      marker.bindPopup(`<a href="${venue.url}" target="_blank" rel="noopener noreferrer">${venue.name}</a>`);
+      
+      // Add the marker to the map
+      marker.addTo(map);
+    }
 </script>
-  <!-- <script src="//unpkg.com/three"></script>
-<!-- <script src="{{ '/assets/js/TrackballControls.js' | relative_url }}"></script> 
-<script src="//unpkg.com/three-globe"></script>
-<script src="{{ '/assets/js/globe.js' | relative_url }}"></script> -->

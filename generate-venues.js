@@ -53,6 +53,7 @@ async function main() {
         // Create the frontmatter
         const frontmatter = `---
   venueName: "${venue.venueName}"
+  venueId: "${venue.id}"
   location:
     address: ${venue.location.address}
     city: "${venue.location.city}"
@@ -65,7 +66,7 @@ async function main() {
   secondaryContactName: "${venue.secondaryContactName}"
   secondaryUsername: "${venue.secondaryUsername}"
   proctors: ${JSON.stringify(venue.proctors)}
-  canSignup: false
+  canSignup: ${venue.canSignup}
   isShown: ${venue.isShown}
 ---
 ${content}
