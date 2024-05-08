@@ -72,6 +72,43 @@ layout: default
           <p class="mt-6 text-lg leading-8 text-gray-300">On this page you can find a list of all venues that are registered around the world. Find a venue nearby and sign up at this venue to join the event! Don't see a venue nearby? Find a local DevOps community and ask them to host the event, or <a href="register" class="text-sm font-semibold leading-6 text-white">host</a> an event yourself.</p>
         </div>
         <div id="map" class="mt-8" style="height: 680px;"></div>
+        <div class="">
+          <div class="mt-8 flow-root">
+            <div class="-mx-4 -my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
+              <div class="inline-block min-w-full py-2 align-middle sm:px-6 lg:px-8">
+                <table class="min-w-full">
+                  <thead class="bg-gray-900">
+                    <tr>
+                      <th scope="col" class="py-3.5 pl-4 pr-3 text-left text-sm font-semibold text-white sm:pl-0">Name</th>
+                      <th scope="col" class="px-3 py-3.5 text-left text-sm font-semibold text-white">Organizer</th>
+                      <th scope="col" class="px-3 py-3.5 text-left text-sm font-semibold text-white">City</th>
+                    </tr>
+                  </thead>
+                  {% assign grouped_venues = site.venues | group_by: "location.country" %}
+                  {% for country in grouped_venues %}
+                    {% assign visible_venues = country.items | where: "isShown", true %}
+                    {% if visible_venues.size > 0 %}
+                      <tbody class="bg-gray-900">
+                        <tr class="border-gray-800">
+                          <th colspan="5" scope="colgroup" class="bg-gray-900 py-2 pl-4 pr-3 text-left text-xl font-semibold text-white sm:pl-3">{{ country.name }}</th>
+                        </tr>
+                        {% for venue in visible_venues %}
+                          <tr class="border-t border-gray-800">
+                            <td class="whitespace-nowrap py-4 pl-4 pr-3 text-sm font-medium text-white sm:pl-3">
+                              <a href="{{ venue.url }}">{{ venue.venueName }}</a>
+                            </td>
+                            <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-300">{{ venue.primaryContactName}}</td>
+                            <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-300">{{ venue.location.city}}</td>
+                          </tr>
+                        {% endfor %}
+                      </tbody>
+                    {% endif %}
+                  {% endfor %}
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
       </div> 
       <!-- CTA section -->
       <div class="relative isolate mt-4 px-6 py-32 sm:mt-16 sm:py-40 lg:px-8">
@@ -109,21 +146,24 @@ layout: default
 {% assign repeatPeriod = "2000"  %}
 
     const gData = [
-   {% for venue in site.venues %}
-  {% assign lat = venue.location.latitude | plus: 0 %}
-  {% assign lng = venue.location.longitude | plus: 0 %}
-  {% if lat and lng %}
-    {
-      name: '{{ venue.venueName }}',
-      url: '{{ venue.url }}',
-      lat: {{ lat }},
-      lng: {{ lng }},
-      maxR: {{ maxR }},
-      propagationSpeed: {{ propagationSpeed }},
-      repeatPeriod: {{ repeatPeriod }}
-    },
-  {% endif %}
-{% endfor %}
+    {% for venue in site.venues %}
+      {% if venue.isShown %}
+        {% assign lat = venue.location.latitude | plus: 0 %}
+        {% assign lng = venue.location.longitude | plus: 0 %}
+        {% if lat and lng %}
+          {
+            name: '{{ venue.venueName }}',
+            organizer: '{{ venue.primaryContactName }}',
+            url: '{{ venue.url }}',
+            lat: {{ lat }},
+            lng: {{ lng }},
+            maxR: {{ maxR }},
+            propagationSpeed: {{ propagationSpeed }},
+            repeatPeriod: {{ repeatPeriod }}
+          },
+        {% endif %}
+      {% endif %}
+    {% endfor %}
     ];
  
 
@@ -134,7 +174,7 @@ layout: default
 
    // .globeImageUrl('images/worldmap.png')
     .globeImageUrl('//unpkg.com/three-globe/example/img/earth-blue-marble.jpg')
-    .pointOfView({ lat: 43.653225, lng: -79.383186, altitude: 1 }) // aim at continental US centroid
+    .pointOfView({ lat: 40.178873, lng: -258.222656, altitude: 1 }) 
     .showGraticules(false)
     .showAtmosphere(true)
     .backgroundColor('rgba(0,0,0,0)')
@@ -170,7 +210,7 @@ layout: default
       var marker = L.marker([venue.lat, venue.lng], {title: venue.name});
       
       // Bind a popup with the venue's name and URL to the marker
-      marker.bindPopup(`<a href="${venue.url}" target="_blank" rel="noopener noreferrer">${venue.name}</a>`);
+      marker.bindPopup(`Visit <a href="${venue.url}" target="_blank" rel="noopener noreferrer">${venue.name}</a> by ${venue.organizer}`);
       
       // Add the marker to the map
       marker.addTo(map);
