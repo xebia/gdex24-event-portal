@@ -61,10 +61,10 @@ async function main() {
     latitude: ${venue.location.latitude}
     longitude: ${venue.location.longitude}
   maxParticipants: ${venue.maxParticipants}
-  primaryContactName: venue.primaryContact?.name || venue.primaryContactName
-  primaryUsername: venue.primaryContact.username || venue.primaryUsername
-  secondaryContactName: venue.secondaryContact.name || venue.secondaryContactName
-  secondaryUsername: venue.secondaryContact.username || ""
+  primaryContactName: "${venue.primaryContact?.name || venue.primaryContactName}"
+  primaryUsername: "${venue.primaryContact?.username || venue.primaryUsername}"
+  secondaryContactName: "${venue.secondaryContact?.name || venue.secondaryContactName}"
+  secondaryUsername: "${venue.secondaryContact?.username || ""}"
   proctors: ${JSON.stringify(venue.proctors)}
   canSignup: ${venue.canSignup}
   isShown: ${venue.isShown}
