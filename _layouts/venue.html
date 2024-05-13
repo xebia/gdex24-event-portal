@@ -10,15 +10,23 @@ layout: default
       </div>
   
       <!-- Header section -->
-      <div class="px-6 pt-14 lg:px-8">
-        <div class="mx-auto max-w-2xl pt-24 text-center sm:pt-40">
-          <h2 class="text-4xl font-bold tracking-tight text-white sm:text-6xl">{{ page.venueName }}</h2>
-          <p class="mt-6 text-lg leading-8 text-gray-300">Welcome to the Global DevOps Experience 2024, hosted by {{page.venueName}} at {{ page.location.city }}</p>
+
+      <div class="relative isolate overflow-hidden px-6 pt-14 lg:px-8">
+        <div class="px-6 py-24 sm:px-6 sm:py-22 lg:px-8">
+          <div class="mx-auto max-w-2xl text-center">
+            <h2 class="text-3xl font-bold tracking-tight text-white sm:text-4xl">{{ page.venueName }}</h2>
+            <p class="mx-auto mt-6  text-lg leading-8 text-gray-300">Welcome to the Global DevOps Experience 2024, hosted by {{page.venueName}} at {{ page.location.city }}</p>
+            <div class="mt-10 flex items-center justify-center gap-x-6">
+              <a href="#register" class="rounded-md bg-white px-3.5 py-2.5 text-sm font-semibold text-gray-900 shadow-sm hover:bg-gray-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white">Register for the event</a>
+              <a href="/" class="text-sm font-semibold leading-6 text-white">Learn more <span aria-hidden="true">→</span></a>
+            </div>
+          </div>
         </div>
       </div>
+      
   
       <!-- Content section -->
-      <div class="mx-auto mt-20 max-w-7xl px-6 lg:px-8">
+      <div class="mx-auto mt-20 max-w-7xl px-6 lg:px-8" >
         <div class="mx-auto max-w-2xl lg:mx-0 lg:max-w-none">
           <div class="grid max-w-xl grid-cols-1 gap-8 text-base leading-7 text-gray-300 lg:max-w-none ">
             <div>
@@ -156,12 +164,12 @@ layout: default
 
       <!-- CTA section -->
       {% if page.canSignup %}
-      <div class="relative isolate -z-10 mt-32 sm:mt-40">
+      <div class="relative isolate -z-10 mt-32 sm:mt-40" id="register">
         <div class="mx-auto max-w-7xl sm:px-6 lg:px-8">
           <div class="mx-auto flex max-w-2xl flex-col gap-16 bg-white/5 px-6 py-16 ring-1 ring-white/10 sm:rounded-3xl sm:p-8 lg:mx-0 lg:max-w-none lg:flex-row lg:items-center lg:py-20 xl:gap-x-20 xl:px-20">
             <img class="h-96 w-full flex-none rounded-2xl object-cover shadow-xl lg:aspect-square lg:h-auto lg:max-w-sm" src="https://images.unsplash.com/photo-1519338381761-c7523edc1f46?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=80" alt="">
             <div class="w-full flex-auto" id="sign-in">
-              <h2 class="text-3xl font-bold tracking-tight text-white sm:text-4xl">Join our venue</h2>
+              <h2 class="text-3xl font-bold tracking-tight text-white sm:text-4xl">Register for the event</h2>
               <p class="mt-6 text-lg leading-8 text-gray-300">To join this venue, login with your GitHub account. </p>
               
               <div class="mt-10 flex">
@@ -175,7 +183,7 @@ layout: default
             </div>
 
             <div class="w-full flex-auto" id="form" style="display: none;">
-              <h2 class="text-3xl font-bold tracking-tight text-white sm:text-4xl">Join our venue</h2>
+              <h2 class="text-3xl font-bold tracking-tight text-white sm:text-4xl">Register for the event</h2>
               <form id="registration-form" class="px-6 pb-24 pt-20 sm:pb-32 lg:px-8 lg:py-48">
                 <div class="mx-auto max-w-xl lg:mr-0 lg:max-w-lg">
                   <div class="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2" >
@@ -201,7 +209,7 @@ layout: default
             </div>
         </div>
         <div class="w-full flex-auto" id="registration-success" style="display: none;">
-          <h2 class="text-3xl font-bold tracking-tight text-white sm:text-4xl">Join our venue</h2>
+          <h2 class="text-3xl font-bold tracking-tight text-white sm:text-4xl">Register for the event</h2>
           <p class="mt-6 text-lg leading-8 text-gray-300">Congrats and thanks! You joined the venue. More information will follow soon, so keep an eye on your mailbox. </p>
         </div>
 
