@@ -13,7 +13,7 @@ layout: default
       <div class="px-6 pt-14 lg:px-8">
         <div class="mx-auto max-w-2xl pt-24 text-center sm:pt-40">
           <h2 class="text-4xl font-bold tracking-tight text-white sm:text-6xl">{{ page.venueName }}</h2>
-          <p class="mt-6 text-lg leading-8 text-gray-300">Welcome to {{page.venueName}} at {{ page.location.city }} for the Global&nbsp;DevOps&nbsp;Experience&nbsp;2024</p>
+          <p class="mt-6 text-lg leading-8 text-gray-300">Welcome to the Global DevOps Experience 2024, hosted by {{page.venueName}} at {{ page.location.city }}</p>
         </div>
       </div>
   
@@ -26,8 +26,8 @@ layout: default
             </div>     
           </div>
           {% unless page.content contains 'Provide a brief description of the venue here' %}
-            <div class="grid max-w-xl grid-cols-1 gap-8 text-base leading-7 text-gray-300 lg:max-w-none mt-8">
-              {{ page.content | newline_to_br }}
+            <div class="grid max-w-xl grid-cols-1 gap-8 text-base leading-7 text-gray-300 lg:max-w-none mt-8 ">
+              <article class="prose prose-invert prose-p:text-base lg:prose-xl prose-headings:font-bold prose-a:decoration-solid ">{{ page.content | markdownify }}</article>
             </div>
           {% endunless %}
         </div>
@@ -42,7 +42,7 @@ layout: default
       <div class="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
         <div class="mx-auto max-w-2xl lg:mx-0">
           <h2 class="text-3xl font-bold tracking-tight text-white sm:text-4xl">What are you going to do</h2>
-          <p class="mt-6 text-lg leading-8 text-gray-300">On the 15th of June, you will have a day full of learning and fun as we will immerge you in the world of DevOps and AI.</p>
+          <p class="mt-6 text-lg leading-8 text-gray-300">On the 15th of June, you will have a day full of learning and fun as we will immerse you in the world of DevOps and AI.</p>
         </div>
         <dl class="mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-8 text-base leading-7 text-gray-300 sm:grid-cols-2 lg:mx-0 lg:max-w-none lg:gap-x-16">
           <div class="relative pl-9">
@@ -53,7 +53,7 @@ layout: default
               </svg>
               Learn about the latest trends.
             </dt>
-            <dd class="inline">We will give you an environment where you can learn about the latest technologies and trends.</dd>
+            <dd class="inline">We will offer you an environment to learn about the latest technologies and trends.</dd>
           </div>
           <div class="relative pl-9">
             <dt class="inline font-semibold text-white">
@@ -62,7 +62,7 @@ layout: default
               </svg>
               Get help.
             </dt>
-            <dd class="inline">We make sure you wont get stuck. It is all about learning and fun, so proctors will be around and the system will guide you.</dd>
+            <dd class="inline">We make sure you don’t get stuck. It is all about learning and fun, so proctors will be around and the system will guide you.</dd>
           </div>
           <div class="relative pl-9">
             <dt class="inline font-semibold text-white">
@@ -71,7 +71,7 @@ layout: default
               </svg>
               Work in a team.
             </dt>
-            <dd class="inline">We will make sure you can work together in a team of peers.</dd>
+            <dd class="inline">We will make sure you are able to work together in a team of peers.</dd>
           </div>
           <div class="relative pl-9">
             <dt class="inline font-semibold text-white">
@@ -80,7 +80,7 @@ layout: default
               </svg>
               Learn about GitHub.
             </dt>
-            <dd class="inline">Use a fully provisioned GitHub environment and see how you can benefit from all its features.</dd>
+            <dd class="inline">Experience a fully provisioned GitHub environment and see how you can benefit from all its features.</dd>
           </div>
           <div class="relative pl-9">
             <dt class="inline font-semibold text-white">
@@ -89,7 +89,7 @@ layout: default
               </svg>
               Explore the usage of AI.
             </dt>
-            <dd class="inline">Both within the develop tools as well from a developer point of view.</dd>
+            <dd class="inline">Both within the develop tools, and from a developer point of view.</dd>
           </div>
           <div class="relative pl-9">
             <dt class="inline font-semibold text-white">
@@ -98,7 +98,7 @@ layout: default
               </svg>
               Have fun.
             </dt>
-            <dd class="inline">Most importantly: have fun by working together on challenging exercises.</dd>
+            <dd class="inline">Most importantly, have fun by working together on challenging exercises.</dd>
           </div>
         </dl>
       </div>
@@ -107,7 +107,7 @@ layout: default
       <div class="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
         <div class="mx-auto max-w-2xl lg:mx-0">
           <h2 class="text-3xl font-bold tracking-tight text-white sm:text-4xl">Your venue organisor(s)</h2>
-          <p class="mt-6 text-lg leading-8 text-gray-300">This event is nothing without the support and guidance of the venue organisor(s). </p>
+          <p class="mt-6 text-lg leading-8 text-gray-300">This event is nothing without the support and guidance of the venue organizer(s).</p>
         </div>
         <ul role="list" class="mx-auto mt-20 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-14 sm:grid-cols-2 lg:mx-0 lg:max-w-none lg:grid-cols-3 xl:grid-cols-4">
           
