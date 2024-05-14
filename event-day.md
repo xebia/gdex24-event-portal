@@ -15,7 +15,7 @@ layout: default
         <h1 class="text-4xl font-bold tracking-tight text-white sm:text-6xl">Welcome to the Global&nbsp;DevOps&nbsp;Experience</h1>
         <p class="mt-6 text-lg leading-8 text-gray-300">Time to get started with the event! You will need to log in using your GitHub account which you used to register yourself. When logged in, you can select a team to join.</p>
         <div class="mt-10 flex items-center justify-center gap-x-6">
-          <a href="#" class="rounded-md bg-indigo-500 px-3.5 py-2.5 text-normal font-semibold text-white shadow-sm hover:bg-indigo-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-400">Join the event!</a>
+          <a href="#" class="rounded-md bg-indigo-500 px-3.5 py-2.5 text-2xl font-semibold text-white shadow-sm hover:bg-indigo-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-400">Join the event!</a>
           <!-- <a href="#" class="text-sm font-semibold leading-6 text-white">Learn more <span aria-hidden="true">→</span></a> -->
         </div>
       </div>

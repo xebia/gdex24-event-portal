@@ -90,12 +90,12 @@ layout: default
                     {% if visible_venues.size > 0 %}
                       <tbody class="bg-gray-900">
                         <tr class="border-gray-800">
-                          <th colspan="5" scope="colgroup" class="bg-gray-900 py-2 pl-4 pr-3 text-left text-xl font-semibold text-white sm:pl-3">{{ country.name }}</th>
+                          <th colspan="5" scope="colgroup" class="bg-gray-900 py-2 pl-4 pr-3 text-left text-2xl font-semibold text-white sm:pl-3">{{ country.name }}</th>
                         </tr>
                         {% for venue in visible_venues %}
                           <tr class="border-t border-gray-800">
-                            <td class="whitespace-nowrap py-4 pl-4 pr-3 text-sm font-medium text-white sm:pl-3">
-                              <a href="{{ venue.url }}">{{ venue.venueName }}</a>
+                            <td class="whitespace-nowrap py-4 pl-4 pr-3 text-normal font-medium text-white sm:pl-3">
+                              <a href="{{ venue.url }}" class="text-white underline">{{ venue.venueName }}</a>
                             </td>
                             <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-300">{{ venue.primaryContactName}}</td>
                             <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-300">{{ venue.location.city}}</td>
@@ -195,7 +195,7 @@ layout: default
 
     myGlobe.controls().autoRotate = true;
     myGlobe.controls().autoRotateSpeed = 1.8;
-    myGlobe.controls().enableZoom = true;
+    myGlobe.controls().enableZoom = false;
 
    // Map
    var map = L.map('map').setView([51.505, -0.09], 2); 
