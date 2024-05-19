@@ -71,5 +71,6 @@ exclude: [
   package-lock.json,
   postcss.config.js,
   readme.md,
-  generate-venues.js
+  generate-venues.js,
+  update-participants.js
 ]

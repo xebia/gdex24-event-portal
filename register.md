@@ -134,16 +134,7 @@ permalink: /register/
   import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.2/firebase-app.js";
   import { getFirestore, collection, addDoc } from "https://www.gstatic.com/firebasejs/10.7.2/firebase-firestore.js";
   import { getAuth, signInWithPopup, GithubAuthProvider } from "https://www.gstatic.com/firebasejs/10.7.2/firebase-auth.js";
-
-  // Your web app's Firebase configuration
-  const firebaseConfig = {
-    apiKey: "AIzaSyBVxk1NQLeHzd6ibSHGvKww3ctk2KdfX_0",
-    authDomain: "global-devops-experience.firebaseapp.com",
-    projectId: "global-devops-experience",
-    storageBucket: "global-devops-experience.appspot.com",
-    messagingSenderId: "1021726338520",
-    appId: "1:1021726338520:web:ce0ba19e00b3a6ed5396ad"
-  };
+  import { firebaseConfig } from '/firebaseConfig.js';
 
   // Initialize Firebase and Firestore
   const app = initializeApp(firebaseConfig);
