@@ -77,7 +77,7 @@ layout: default
       const venueId = participantData.venueId;
       await fetchTeams(user, venueId, participantData);
     } else {
-      alert('You are not registered for the event.');
+      alert('You are not registered for the event or we cannot find you with this account. Please do register to gain access to the event.');
     }
   }
   // Fetch teams with the same venueId and check team membership
