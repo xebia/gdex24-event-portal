@@ -39,7 +39,7 @@ async function main() {
   //console.log(venue);
         // Create a slug from the venue name
         const slug = slugify(venue.venueName, { lower: true });
-        const proctors = Array.isArray(venue.proctors) ? venue.proctors : [venue.proctors];
+        const proctors = venue.proctors==null ? null : Array.isArray(venue.proctors) ? venue.proctors : [venue.proctors];
 
         var content = venue.__content;
 
@@ -56,7 +56,7 @@ async function main() {
   venueName: "${venue.venueName}"
   venueId: "${venue.id}"
   location:
-    address: ${venue.location.address}
+    address: "${venue.location.address}"
     city: "${venue.location.city}"
     country: "${venue.location.country}"
     latitude: ${venue.location.latitude}
@@ -64,8 +64,8 @@ async function main() {
   maxParticipants: ${venue.maxParticipants}
   primaryContactName: "${venue.primaryContact?.name || venue.primaryContactName}"
   primaryUsername: "${venue.primaryContact?.username || venue.primaryUsername}"
-  secondaryContactName: "${venue.secondaryContact?.name || venue.secondaryContactName}"
-  secondaryUsername: "${venue.secondaryContact?.username || ""}"
+  secondaryContactName: "${venue.secondaryContact?.name  }"
+  secondaryUsername: "${venue.secondaryContact?.username }"
   proctors: ${JSON.stringify(proctors)}
   canSignup: ${venue.canSignup}
   isShown: ${venue.isShown}
