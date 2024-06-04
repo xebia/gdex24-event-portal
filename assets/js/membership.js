@@ -180,7 +180,8 @@ async function joinTeam(user, participantData, newTeamId, allTeams) {
         }) => members.some(member => member.uid === user.uid));
 
         if (currentTeam && currentTeam.teamId !== newTeamId) {
-            const confirmation = confirm(`You are about to leave the team ${currentTeam.teamData.name}. Are you sure?`);
+            const teamName = currentTeam.teamData.name.startsWith('global-') ? currentTeam.teamData.name.replace('global-', '') : currentTeam.teamData.name;
+            const confirmation = confirm(`You are about to leave the team ${teamName}. Are you sure?`);
             if (!confirmation) return;
         }
 
@@ -226,32 +227,38 @@ async function startTeam(githubUsername, selectedTeam) {
   const baseUrl = 'https://gdex2024-eventapp-app.azurewebsites.net';
 
   // Get a team by name
-  const response = await fetch(`${baseUrl}/api/teams/${teamName}`);
-  const team = await response.json();
-
-  if (!team) {
+    let team;
+    const response = await fetch(`${baseUrl}/api/teams/${teamName}`);
+    if (response.status === 404) {
     // Create a team if it doesn't exist
     await fetch(`${baseUrl}/api/teams/${teamName}`, {
-      method: 'POST',
-      headers: {
+        method: 'POST',
+        headers: {
         'Content-Type': 'application/json'
-      },
-      body: JSON.stringify({
+        },
+        body: JSON.stringify({
         RepositoryName: teamData.name
-      })
+        })
     });
-  }
+    } else if (!response.ok) {
+    throw new Error(`HTTP error! status: ${response.status}`);
+    } else {
+    team = await response.json();
+    }
 
   // Add a member to the team
-  await fetch(`${baseUrl}/api/teams/${teamData.name}/members`, {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json'
-    },
-    body: JSON.stringify({
-      GitHubHandle: githubUsername
-    })
-  });
+    const responseAdd = await fetch(`${baseUrl}/api/teams/${teamName}/members`, {
+        method: 'POST',
+        headers: {
+        'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+        GitHubHandle: githubUsername
+        })
+    });
+    if (!responseAdd.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`);
+    }
 
   // redirect to the start-team
   window.location.href = `/start-team`;
