@@ -56,7 +56,7 @@ async function handleUserLogin(user) {
         const venueId = participantData.venueId;
         await fetchTeams(user, venueId, participantData);
     } else {
-        alert('You are not registered for the event or we cannot find you with this account. Please do register again with your venue to gain access to the event.');
+        alert('You are not registered for the event or we cannot find you with this account. Please do register again with your venue to gain access to the event. Find you venue from the list and register.');
     }
 }
 // Fetch teams with the same venueId and check team membership
