@@ -147,7 +147,7 @@ function displayTeams(user, participantData, joinedTeams, availableTeams) {
         teamId,
         teamData
     }, index) => {
-        const isSelected = teamId === selectedTeam?.Id;
+        const isSelected = teamId === selectedTeam?.teamId;
         const teamName = teamData.name.startsWith('global-') ? teamData.name.replace('global-', '') : teamData.name;
         const teamElement = document.createElement('label');
         teamElement.setAttribute('aria-label', teamName);
