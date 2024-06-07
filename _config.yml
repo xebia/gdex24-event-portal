@@ -1,31 +1,17 @@
-# Welcome to Jekyll!
-#
-# This config file is meant for settings that affect your whole blog, values
-# which you are expected to set up once and rarely edit after that. If you find
-# yourself editing this file very often, consider using Jekyll's data files
-# feature for the data you need to update frequently.
-#
-# For technical reasons, this file is *NOT* reloaded automatically when you use
-# 'bundle exec jekyll serve'. If you change this file, please restart the server process.
-#
-# If you need help with YAML syntax, here are some quick references for you:
-# https://learn-the-web.algonquindesign.ca/topics/markdown-yaml-cheat-sheet/#yaml
-# https://learnxinyminutes.com/docs/yaml/
-#
-# Site settings
-# These are used to personalize your new site. If you look in the HTML files,
-# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
-# You can create any custom variable you would like, and they will be accessible
-# in the templates via {{ site.myvariable }}.
 
 title: Global DevOps Experience
 email: your-email@example.com
 description: >- # this means to ignore newlines until "baseurl:"
-  Welcome to the "Global DevOps Experience", a unique, global event where the worlds of DevOps and DevEX converge. 
-  This event is designed for those intrigued by the potential of technology to transform traditional development practices into something far more dynamic by using GitHub and Azure.
+  Welcome to the Global DevOps Experience 2024, a unique, global event where the worlds of DevOps and DevEX converge. 
+  This event is designed for those intrigued by the potential of technology to transform traditional development practices into something far more dynamic by using GitHub, AI, security and Azure.
 baseurl: "" # the subpath of your site, e.g. /blog
 
 url: www.globaldevopsx.com
+logo: /images/banner.png
+
+twitter:
+  username: xebia
+  card: summary
 
 repository: globaldevopsexperience/event-portal
 
@@ -34,6 +20,7 @@ theme: minima
 plugins:
   - jekyll-feed
   - jekyll-postcss
+  - jekyll-seo-tag
 
 postcss:
   cache: false
@@ -53,11 +40,13 @@ defaults:
       type: "venues"
     values:
       layout: "venue"
+      image: /images/banner.png
   - scope:
       path: "_pages"
       type: pages
     values:
       layout: default
+      image: /images/banner.png
 
 collections:
   venues:

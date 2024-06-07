@@ -70,18 +70,31 @@ async function fetchTeams(user, venueId, participantData) {
     querySnapshot.forEach((doc) => {
         const teamData = doc.data();
         const teamId = doc.id;
-        const member = teamData.members?.find(member => member.uid === user.uid);
-        if (member) {
-            joinedTeams.push({
-                teamId,
-                teamData
-            });
-        } else {
+        if (teamData.members){
+            const member = teamData.members?.find(member => member.uid === user.uid);
+            if (member) {
+                joinedTeams.push({
+                    teamId,
+                    teamData
+                });
+            } else {
+                availableTeams.push({
+                    teamId,
+                    teamData
+                });
+            }   
+        }
+        else
+        {
+            // add a member array to the teamData object
+            teamData.members = [];
+
             availableTeams.push({
                 teamId,
                 teamData
             });
         }
+
     });
 
     displayTeams(user, participantData, joinedTeams, availableTeams);
@@ -127,29 +140,33 @@ function displayTeams(user, participantData, joinedTeams, availableTeams) {
         teamsContainer.appendChild(selectTeamText);
     }
 
+    // Sort by team name
+    allTeams.sort((a, b) => a.teamData.name.localeCompare(b.teamData.name));
+
     allTeams.forEach(({
         teamId,
         teamData
     }, index) => {
+        const isSelected = teamId === selectedTeam?.Id;
         const teamName = teamData.name.startsWith('global-') ? teamData.name.replace('global-', '') : teamData.name;
         const teamElement = document.createElement('label');
         teamElement.setAttribute('aria-label', teamName);
         teamElement.setAttribute('aria-description', `${teamData.members.length} participants`);
-        teamElement.className = `relative block cursor-pointer rounded-lg border px-6 py-4 shadow-sm focus:outline-none sm:flex sm:justify-between ${index === 0 ? 'border-indigo-600' : 'border-gray-300'}`;
+        teamElement.className = `relative block cursor-pointer rounded-lg border px-6 py-4 shadow-sm focus:outline-none sm:flex sm:justify-between ${isSelected ? 'border-indigo-600' : 'border-gray-300'}`;
         teamElement.innerHTML = `
-       <input type="radio" name="team" value="${teamId}" class="sr-only" ${index === 0 ? 'checked' : ''}>
+       <input type="radio" name="team" value="${teamId}" class="sr-only" ${isSelected? 'checked' : ''}>
        <span class="flex items-center">
          <span class="flex flex-col text-normal text-left">
            <span class="font-medium text-white text-xl">${teamName}</span>
            <span class="text-gray-400">${teamData.members.length} participants</span>
          </span>
        </span>
-       ${index === 0 ? `
+       ${isSelected ? `
        <span class="mt-2 flex text-sm sm:ml-4 sm:mt-0 sm:flex-col sm:text-right">
          <span class="inline-flex items-center rounded-md bg-green-100 px-2 py-1 text-normal font-bold text-green-700">selected</span>
        </span>
        ` : ''}
-       <span class="pointer-events-none absolute -inset-px rounded-lg border-2 ${index === 0 ? 'border-indigo-600' : 'border-transparent'}" aria-hidden="true"></span>
+       <span class="pointer-events-none absolute -inset-px rounded-lg border-2 ${isSelected ? 'border-indigo-600' : 'border-transparent'}" aria-hidden="true"></span>
      `;
 
         teamsContainer.appendChild(teamElement);
