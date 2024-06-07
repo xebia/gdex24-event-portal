@@ -219,6 +219,9 @@ async function joinTeam(user, participantData, newTeamId, allTeams) {
 
         await Promise.all(leavePromises);
 
+        // Remove from the event app
+        await removeFromTeam(user.reloadUserInfo.screenName);    
+
         // Join the new team
         const newTeamDocRef = doc(db, 'teams', newTeamId);
         await updateDoc(newTeamDocRef, {
@@ -233,17 +236,40 @@ async function joinTeam(user, participantData, newTeamId, allTeams) {
     }
 }
 
+async function removeFromTeam(githubUsername)
+{
+
+    const baseUrl = 'https://gdex2024-eventapp-app.azurewebsites.net';
+    let teamName;
+    let team;
+
+    const response = await fetch(`${baseUrl}/api/teams/member/${githubUsername}`);
+    if (response.status === 404) {
+        console.log(`User ${githubUsername} is not a member of any team`);
+    } else if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`);
+    } else {
+        team = await response.json();
+        teamName = team.teamName;
+        // Remove the member from the team
+        await fetch(`${baseUrl}/api/teams/${teamName}/members/${githubUsername}`, {
+            method: 'DELETE'
+        });
+    }
+
+}
+
 async function startTeam(githubUsername, selectedTeam) {
-  // Access the teamId and teamData from the selectedTeam
-  const { teamId, teamData } = selectedTeam;
+    // Access the teamId and teamData from the selectedTeam
+    const { teamId, teamData } = selectedTeam;
 
-  // Log or do something with the githubUsername and selectedTeam
-  console.log(`Starting event for team ${teamData.name} (ID: ${teamId}) with GitHub user ${githubUsername}`);
+    // Log or do something with the githubUsername and selectedTeam
+    console.log(`Starting event for team ${teamData.name} (ID: ${teamId}) with GitHub user ${githubUsername}`);
 
-  const teamName = teamData.name.startsWith('global-') ? teamData.name.replace('global-', '') : teamData.name;
-  const baseUrl = 'https://gdex2024-eventapp-app.azurewebsites.net';
+    const teamName = teamData.name.startsWith('global-') ? teamData.name.replace('global-', '') : teamData.name;
+    const baseUrl = 'https://gdex2024-eventapp-app.azurewebsites.net';
 
-  // Get a team by name
+    // Get a team by name
     let team;
     const response = await fetch(`${baseUrl}/api/teams/${teamName}`);
     if (response.status === 404) {
@@ -254,13 +280,14 @@ async function startTeam(githubUsername, selectedTeam) {
         'Content-Type': 'application/json'
         },
         body: JSON.stringify({
-        RepositoryName: teamData.name
+            RepositoryName: teamData.name,
+            VenueId: teamData.venueId,
         })
     });
     } else if (!response.ok) {
-    throw new Error(`HTTP error! status: ${response.status}`);
+        alert("Unable to add you to the team. Reach out to a proctor: " + error.message);
     } else {
-    team = await response.json();
+        team = await response.json();
     }
 
   // Add a member to the team
@@ -270,21 +297,15 @@ async function startTeam(githubUsername, selectedTeam) {
         'Content-Type': 'application/json'
         },
         body: JSON.stringify({
-        GitHubHandle: githubUsername
+            GitHubHandle: githubUsername
         })
     });
     if (!responseAdd.ok) {
-        throw new Error(`HTTP error! status: ${response.status}`);
+        alert("Unable to add you to the team. Reach out to a proctor: " + error.message);
     }
 
-  // redirect to the start-team
-  window.location.href = `/start-team`;
+    // redirect to the start-team
+    window.location.href = `/start-team`;
 
-  // Remove a member from the team
-  // Uncomment the following lines if you want to remove a member from the team
-  /*
-  await fetch(`${baseUrl}/api/teams/${teamData.name}/members/${githubUsername}`, {
-    method: 'DELETE'
-  });
-  */
+
 }
