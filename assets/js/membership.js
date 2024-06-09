@@ -292,6 +292,10 @@ async function startTeam(githubUsername, selectedTeam) {
             RepositoryName: teamData.name,
             VenueId: teamData.venueId,
         })
+    }).catch((error) => {
+        console.error('Error creating team:', error);
+        appInsights.trackException({ exception: error });
+        alert('An error occurred while processing your request. Please try again later.');    
     });
     } else if (!response.ok) {
         alert("Unable to add you to the team. Reach out to a proctor: " + error.message);
