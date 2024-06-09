@@ -23,7 +23,17 @@
     // ld: 0,
     // useXhr: 1,
     crossOrigin: "anonymous",
-    // onInit: null,
+    onInit: function (sdk) {
+		sdk.addTelemetryInitializer(function (envelope) {
+			if (envelope.baseType === 'ExceptionData') {
+				if (typeof (envelope.baseData.exceptions) === 'undefined' &&
+					envelope.baseData.message &&
+					envelope.baseData.message.indexOf('same-origin policy prevents us from getting the details of this exception') >= 0) {
+					return false;
+				}
+			}
+		});
+	},
     // cr: 0,
     cfg: { // Application Insights Configuration
      connectionString: "InstrumentationKey=30787403-8f8f-4867-98dc-6c5f7711700f;IngestionEndpoint=https://westeurope-5.in.applicationinsights.azure.com/;LiveEndpoint=https://westeurope.livediagnostics.monitor.azure.com/;ApplicationId=440c8ff7-3b54-433b-aa34-6a5bf625d96a"

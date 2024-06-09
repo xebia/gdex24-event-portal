@@ -38,9 +38,13 @@ loginButton.addEventListener('click', function() {
             var user = result.user;
             var ghHandle = result.user.reloadUserInfo.screenName;
             handleUserLogin(user);
+            appInsights.setAuthenticatedUserContext(ghHandle);
+            appInsights.trackEvent({name: "userLogin", properties: {username: ghHandle}});
         }).catch((error) => {
+            appInsights.trackException({ exception: error });
             console.error("Error during login:", error);
         });
+        return false;
 });
 // Handle user login
 async function handleUserLogin(user) {
@@ -128,6 +132,7 @@ function displayTeams(user, participantData, joinedTeams, availableTeams) {
         startButton.className = 'text-left rounded-md bg-indigo-500 px-3.5 py-2.5 text-2xl font-semibold text-white shadow-sm hover:bg-indigo-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500';
         startButton.addEventListener('click', () => {
             const githubUsername = user.reloadUserInfo.screenName;
+            appInsights.trackEvent({name: "eventStarted", properties: {teamId: selectedTeam.teamId, username: githubUsername}});
             startTeam(githubUsername, selectedTeam);
         });
 
@@ -182,6 +187,7 @@ function displayTeams(user, participantData, joinedTeams, availableTeams) {
             if (event.target.checked) {
                 await joinTeam(user, participantData, teamId, allTeams);
                 fetchTeams(user, participantData.venueId, participantData);
+                appInsights.trackEvent({name: "teamSelected", properties: {teamId: teamId, username: user.reloadUserInfo.screenName}});
             }
         });
     });
@@ -209,6 +215,7 @@ async function joinTeam(user, participantData, newTeamId, allTeams) {
         }) => {
             if (teamId !== newTeamId) {
                 const teamDocRef = doc(db, 'teams', teamId);
+                appInsights.trackEvent({name: "teamLeft", properties: {teamId: teamId}});
                 return updateDoc(teamDocRef, {
                     members: arrayRemove({
                         uid: user.uid,
@@ -233,6 +240,7 @@ async function joinTeam(user, participantData, newTeamId, allTeams) {
         });
 
     } catch (error) {
+        appInsights.trackException({ exception: error });
         throw new Error('Error joining team', error);
     }
 }
