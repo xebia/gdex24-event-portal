@@ -264,6 +264,7 @@ layout: default
         return false;
       })
       .catch((error) => {
+        appInsights.trackException({ exception: error });
         console.error('Authentication error:', error);
       });
   });
@@ -301,6 +302,7 @@ layout: default
         document.getElementById('registration-success').style.display = 'block';
         // Handle successful submission
       } catch (error) {
+        appInsights.trackException({ exception: error });
         console.error('Error registering venue:', error);
         // Handle errors
       }
