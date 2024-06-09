@@ -57,6 +57,7 @@ async function handleUserLogin(user) {
         await fetchTeams(user, venueId, participantData);
     } else {
         alert('You are not registered for the event or we cannot find you with this account. Please do register again with your venue to gain access to the event. Find you venue from the list and register.');
+        throw new Error('User not registered');
     }
 }
 // Fetch teams with the same venueId and check team membership
@@ -232,7 +233,7 @@ async function joinTeam(user, participantData, newTeamId, allTeams) {
         });
 
     } catch (error) {
-        console.error("Error updating teams:", error);
+        throw new Error('Error joining team', error);
     }
 }
 
@@ -247,7 +248,7 @@ async function removeFromTeam(githubUsername)
     if (response.status === 404) {
         console.log(`User ${githubUsername} is not a member of any team`);
     } else if (!response.ok) {
-        throw new Error(`HTTP error! status: ${response.status}`);
+        throw new Error(`Error fetching team: ${response}`);
     } else {
         team = await response.json();
         teamName = team.teamName;
@@ -286,6 +287,7 @@ async function startTeam(githubUsername, selectedTeam) {
     });
     } else if (!response.ok) {
         alert("Unable to add you to the team. Reach out to a proctor: " + error.message);
+        throw new Error(`Error fetching team: ${response}`);
     } else {
         team = await response.json();
     }
@@ -302,10 +304,10 @@ async function startTeam(githubUsername, selectedTeam) {
     });
     if (!responseAdd.ok) {
         alert("Unable to add you to the team. Reach out to a proctor: " + error.message);
+        throw new Error(`Error adding member to team: ${responseAdd}`);
     }
 
     // redirect to the start-team
     window.location.href = `/start-team`;
-
 
 }
