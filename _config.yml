@@ -6,8 +6,8 @@ description: >- # this means to ignore newlines until "baseurl:"
   This event is designed for those intrigued by the potential of technology to transform traditional development practices into something far more dynamic by using GitHub, AI, security and Azure.
 baseurl: "" # the subpath of your site, e.g. /blog
 
-url: www.globaldevopsx.com
-logo: /images/banner.png
+url: https://www.globaldevopsx.com
+logo: https://www.globaldevopsx.com/images/banner.png
 
 twitter:
   username: xebia
