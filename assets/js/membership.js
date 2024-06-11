@@ -154,7 +154,7 @@ function displayTeams(user, participantData, joinedTeams, availableTeams) {
         teamData
     }, index) => {
         const isSelected = teamId === selectedTeam?.teamId;
-        const teamName = teamData.name.startsWith('global-') ? teamData.name.replace('global-', '') : teamData.name;
+        const teamName = teamData.name;
         const teamElement = document.createElement('label');
         teamElement.setAttribute('aria-label', teamName);
         teamElement.setAttribute('aria-description', `${teamData.members.length} participants`);
@@ -204,7 +204,7 @@ async function joinTeam(user, participantData, newTeamId, allTeams) {
         }) => members.some(member => member.uid === user.uid));
 
         if (currentTeam && currentTeam.teamId !== newTeamId) {
-            const teamName = currentTeam.teamData.name.startsWith('global-') ? currentTeam.teamData.name.replace('global-', '') : currentTeam.teamData.name;
+            const teamName = currentTeam.teamData.name;
             const confirmation = confirm(`You are about to leave the team ${teamName}. Are you sure?`);
             if (!confirmation) return;
         }
@@ -275,7 +275,7 @@ async function startTeam(githubUsername, selectedTeam) {
     // Log or do something with the githubUsername and selectedTeam
     console.log(`Starting event for team ${teamData.name} (ID: ${teamId}) with GitHub user ${githubUsername}`);
 
-    const teamName = teamData.name.startsWith('global-') ? teamData.name.replace('global-', '') : teamData.name;
+    const teamName = teamData.name;
     const baseUrl = 'https://gdex2024-eventapp-app.azurewebsites.net';
 
     // Get a team by name
