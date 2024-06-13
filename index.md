@@ -55,10 +55,9 @@ layout: default
             <div class="mt-10 flex items-center gap-x-6">
               {% if site.eventActive %}
                <a href="/event-day" class="rounded-md bg-indigo-500 px-3.5 py-2.5 text-2xl font-semibold text-white shadow-sm hover:bg-indigo-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-400">Join now</a>
-              <a href="#participants" class="text-sm font-semibold leading-6 text-white">Register at a venue<span aria-hidden="true">→</span></a>
               {% else %} 
               <a href="#participants" class="rounded-md bg-indigo-500 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-400">Register as participant</a>
-              <a href="{{ '/register' | relative_url }}" class="text-sm font-semibold leading-6 text-white">Register your venue <span aria-hidden="true">→</span></a>
+              <!-- <a href="{{ '/register' | relative_url }}" class="text-sm font-semibold leading-6 text-white">Register your venue <span aria-hidden="true">→</span></a> -->
               {% endif %}
             </div>
           </div>
@@ -159,11 +158,11 @@ layout: default
           <h2 class="text-3xl font-bold tracking-tight text-white sm:text-4xl">What do I need to do to host a venue</h2>
           <p class="mx-auto mt-6  text-lg leading-8 text-justify text-gray-300">Well, since GDEX is an event-out-of-the-box, you need to arrange a venue, some lunch and some people with a community ❤️ that can help proctoring GitHub, Azure and the challenges. Don't worry! We, the organizers, provide you, the local venue, with everything you need to run a high-value community event. We provide the presentations, the hands-on labs, the infrastructure, and a fun narrative for the day. We also provide instructions around the challenges and how to proctor these. </p>
           <p class="mx-auto mt-6  text-lg leading-8 text-justify text-gray-300">
- Interested? Please sign up and provide us with some basic details, and we will be in touch to help you set everything up.</p>
-          <div class="mt-10 flex items-center justify-center gap-x-6">
+          At the moment, you can no longer register as a new venue.</p>
+          <!-- <div class="mt-10 flex items-center justify-center gap-x-6">
             <a href="{{ '/register' | relative_url }}" class="rounded-md bg-white px-3.5 py-2.5 text-sm font-semibold text-gray-900 shadow-sm hover:bg-gray-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white">Register your venue</a>
             <a href="#more" class="text-sm font-semibold leading-6 text-white">Learn more <span aria-hidden="true">→</span></a>
-          </div>
+          </div> -->
         </div>
       </div>
     </main>
