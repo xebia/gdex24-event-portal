@@ -120,10 +120,16 @@ function displayTeams(user, participantData, joinedTeams, availableTeams) {
     }) => members.some(member => member.uid === user.uid));
 
     const introText = document.createElement('p');
-    introText.textContent = `Welcome to venue ${participantData.venueName}!`;
+    introText.textContent = `Welcome to your venue ${participantData.venueName}!`;
     introText.className = 'text-white text-lg';
 
     teamsContainer.appendChild(introText);
+
+    const selectTeamInstruction = document.createElement('p');
+    selectTeamInstruction.textContent = 'Please select a team from the below list to participate in the event.';
+    selectTeamInstruction.className = 'text-white text-lg';
+
+    teamsContainer.appendChild(selectTeamInstruction);
 
     if (selectedTeam) {
         // If there is a selected team, add a button to start the event
@@ -133,7 +139,7 @@ function displayTeams(user, participantData, joinedTeams, availableTeams) {
         startButton.addEventListener('click', () => {
             const githubUsername = user.reloadUserInfo.screenName;
             appInsights.trackEvent({name: "eventStarted", properties: {teamId: selectedTeam.teamId, username: githubUsername}});
-            startTeam(githubUsername, selectedTeam);
+            startTeam(githubUsername, selectedTeam, participantData.venueName);
         });
 
         teamsContainer.appendChild(startButton);
@@ -268,7 +274,7 @@ async function removeFromTeam(githubUsername)
 
 }
 
-async function startTeam(githubUsername, selectedTeam) {
+async function startTeam(githubUsername, selectedTeam, venueName) {
     // Access the teamId and teamData from the selectedTeam
     const { teamId, teamData } = selectedTeam;
 
@@ -320,6 +326,6 @@ async function startTeam(githubUsername, selectedTeam) {
     }
 
     // redirect to the start-team
-    window.location.href = `/start-team`;
+    window.location.href = `/start-team?name=${teamName}&venueName=${venueName}`;
 
 }
