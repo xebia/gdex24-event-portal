@@ -247,7 +247,9 @@ You can also watch the video that explains this <a href="https://youtu.be/reoUAS
       const name = urlParams.get('name');
       const venueName = urlParams.get('venueName');
 
-      document.getElementById('joinedteam').textContent = `You just joined ${name}!`;
+      if (name && venueName) {
+        document.getElementById('joinedteam').textContent = `You just joined ${name}!`;
+      }
     }
 
 </script>
