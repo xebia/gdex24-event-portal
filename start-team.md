@@ -47,6 +47,8 @@ layout: default
         <p class="mx-auto mt-6 max-w-xl text-lg leading-8 text-gray-300">To get started with the event, visit the intranet.</p>
         <div class="mt-10 flex items-center justify-center gap-x-6">
           <a href="https://intranet.globoticket.com" class="rounded-md bg-indigo-600 px-3.5 py-2.5 text-2xl font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Go to the intranet portal</a>
+          <br/>
+          <img src="./images/intranet.png" alt="Globoticket Intranet" class="mt-4" width="500px">
         </div>
       </div>
     </div>  
@@ -59,27 +61,13 @@ layout: default
           <div class="mx-auto max-w-7xl px-6 lg:px-8">
             <div class="mx-auto max-w-2xl lg:mx-0" id='handbook'>
               <h2 class="text-3xl font-bold tracking-tight text-white sm:text-4xl">Participant Manual</h2>
-              <p class="mt-6 text-lg leading-8 text-gray-200">Participants will be onboarded as employees of Globoticket, and will also go through the challenges as such. In this manual we describe the flow of the challenges in detail
+              <p class="mt-6 text-lg leading-8 text-gray-200">You will be onboarded as employees of Globoticket, and will also go through the challenges as such. In this manual we describe the flow of the challenges in detail
 You can also watch the video that explains this <a href="https://youtu.be/reoUAScxIUo" class="text-blue-600 hover:text-blue-800 underline" target="_blank">here</a>.</p>
             </div>
            <div class="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-none">
-    <h2 class="text-2xl font-bold leading-9 text-white">Register for the event</h2>
-    <p class="mt-4 text-lg leading-7 text-gray-200">When you registered for Global DevOps Experience you chose a venue where you want to join. To be able to do that you needed to register with your GitHub Account. This is important! You can only participate in the event when you registered with your GitHub Handle on the <a href="https://www.globaldevopsx.com" class="text-blue-600 underline">Global DevOps Experience website</a>. If you did not do that, please do it, so you can join the event.</p>
-    <h2 class="mt-8 text-2xl font-bold leading-9 text-white">Join the event</h2>
-    <p class="mt-4 text-lg leading-7 text-gray-200">On event day, you will navigate to the Event Day page. There will be a banner on the homepage of <a href="https://www.globaldevopsx.com" class="text-blue-600 underline">GlobalDevOpsX</a>. Otherwise navigate to this link <a href="https://globaldevopsx.com/event-day" class="text-blue-600 underline">https://www.globaldevopsx.com/event-day</a>.</p>
-    <ul class="mt-4 list-disc list-inside text-lg leading-7 text-gray-200">
-        <li>There you will see a Big Button, <code class="bg-gray-800 text-white rounded px-1 py-0.5">Join Event</code>.</li>
-        <li>Click the button.</li>
-        <li>You need to login with your GitHub account that you used for registration.</li>
-        <li>Then you will be presented with a number of teams you can join.</li>
-        <li>You select a team. Maybe you join a random team, or you will join a team together with others that you agree upon.</li>
-        <li>⚠️ You can always come back to this page to select another team. You can only be part of one team, so you will leave the other team.</li>
-        <li>When you selected a team, you can <code class="bg-gray-800 text-white rounded px-1 py-0.5">Start the Event</code> by pressing the button.</li>
-    </ul>
-    <img src="./images/start-event.gif" alt="Start Event" class="mt-4">
     <h2 class="mt-8 text-2xl font-bold leading-9 text-white">Intermediate page</h2>
-    <p class="mt-4 text-lg leading-7 text-gray-200">When you selected a team and it was the first time you did this, you will be presented with some info on the mechanics of the event. Read through the documentation. You can always come back to this page by clicking <code class="bg-gray-800 text-white rounded px-1 py-0.5">Helpdesk</code> button on the Globoticket Intranet.
-    When you leave this page, you will be redirected to the <a href="https://intranet.globoticket.com" class="text-blue-600 underline">Globoticket Intranet</a>. You can always navigate there in the browser as well.</p>
+    <p class="mt-4 text-lg leading-7 text-gray-200">In the previous page you selected a team and now you are on this page. Here we will explain the mechanics of the event. Read through the documentation. You can always come back to this page by clicking <code class="bg-gray-800 text-white rounded px-1 py-0.5">Helpdesk</code> button on the Globoticket Intranet.
+    When you leave this page, after you clicked the [Go to the Intranet portal] button, you will be redirected to the <a href="https://intranet.globoticket.com" class="text-blue-600 underline">Globoticket Intranet</a>. You can always navigate there in the browser as well.</p>
     <img src="./images/help-page-intranet.gif" alt="Help Page Intranet" class="mt-4">
     <h2 class="mt-8 text-2xl font-bold leading-9 text-white">Globoticket Intranet</h2>
     <p class="mt-4 text-lg leading-7 text-gray-200">On the Globoticket Intranet you can find news of Globoticket. You can also see some buttons on top:</p>
@@ -87,7 +75,7 @@ You can also watch the video that explains this <a href="https://youtu.be/reoUAS
         <li><code class="bg-gray-800 text-white rounded px-1 py-0.5">Helpdesk</code> - This brings you back to the previous page and explains the mechanics and most important commands.</li>
         <li><code class="bg-gray-800 text-white rounded px-1 py-0.5">Scoreboard</code> - it shows the <a href="https://scoreboard.globoticket.com" class="text-blue-600 underline">Scoreboard</a>. It shows your and other teams' score and other.</li>
         <li><code class="bg-gray-800 text-white rounded px-1 py-0.5">Directory</code> - It shows some people from Globoticket.</li>
-        <li><code class="bg-gray-800 text-white rounded px-1 py-0.5">News</code> - It shows the news page.</li>
+        <li><code class="bg-gray-800 text-white rounded px-1 py-0.5">Team repository</code> - It shows the name of your team, and a link to our repository</li>
     </ul>
     <p class="mt-4 text-lg leading-7 text-gray-200">The intranet contains news messages. The most important ones are marked with an icon. You can read the news messages. The top messages are most important because they are the start of the challenges. The news provides you with the context.</p>
     <p class="mt-4 text-lg leading-7 text-gray-200">Once you read the context, you can press "Mark as Read". This is the trigger to get started. You will get a call from one of the people at Globoticket with some information on your challenge. Once the person hangs up you can press <code class="bg-gray-800 text-white rounded px-1 py-0.5">Start Challenge</code>. You will be redirected to your Repository on GitHub that is created for you!</p>
