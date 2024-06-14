@@ -86,10 +86,10 @@ layout: default
           </p>
           <p class="mt-6 text-lg leading-8 text-gray-300 text-justify">The Global DevOps experience follows a similar concept. The Global DevOps Experience is an "Event out of the box" and follows the sun. An event where the worlds of DevOps, Platform Engineering, Developer Experience (DevEx) and AI come together! 
           </p>
-          <p class="mt-6 text-lg leading-8 text-gray-300 text-justify">This one-day event will be hosted by many venues all over the world and is more than an event. It is an experience! Participants will be part of a team in a fictious company, Globoticket, and help them to overcome some difficult and relevant challenges in the field of Platform Engineering, DevOps with GitHub and Azure, and Software Development with AI.</p>
+          <p class="mt-6 text-lg leading-8 text-gray-300 text-justify">This one-day event will be hosted by many venues all over the world and is more than an event. It is an experience! Participants will be part of a team in a fictitious company, Globoticket, and help them to overcome some difficult and relevant challenges in the field of Platform Engineering, DevOps with GitHub and Azure, and Software Development with AI.</p>
           <p class="mt-6 text-lg leading-8 text-gray-300 text-justify">People will be introduced in using GitHub Codespaces, Copilot and Advanced Security. THey will learn to deploy their software in a controlled manner and use tools like Azure OpenAI and Semantic Kernel to come up with creative solutions to save Globoticket.
           The event is all about learning and experiencing the latest and greatest tools and lower the barrier to use this during the day-to-day job.</p>
-          <p class="mt-6 text-lg leading-8 text-gray-300 text-justify">The event is hosten in 40 venues around the world. Because GDEX is an event out of the box, the partipicpants get a fully fedged working environment on GitHub and Azure to drectly get started with the real work.</p>
+          <p class="mt-6 text-lg leading-8 text-gray-300 text-justify">The event is hosted in 40 venues around the world. Because GDEX is an event out of the box, the participants get a fully fledged working environment on GitHub and Azure to directly get started with the real work.</p>
         </div>
       </div>
       <!-- Current venues -->
