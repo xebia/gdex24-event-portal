@@ -58,7 +58,7 @@ layout: default
              <p class="mt-6 text-lg leading-8 text-gray-300">This one-day event will be hosted by many venues all over the world and is more than an event. It is an experience. You will be part of a team in a fictitious company, Globoticket, and help them to overcome some difficult and relevant challenges in the field of Platform Engineering, DevOps and Software Development. The event is centered around GitHub and Azure and AI and is the first global GitHub community event!</p>
             <div class="mt-10 flex items-center gap-x-6">
               {% if site.eventActive %}
-               <a href="/event-day" class="rounded-md bg-indigo-500 px-3.5 py-2.5 text-2xl font-semibold text-white shadow-sm hover:bg-indigo-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-400">Join now</a>
+               <a href="/event-day" class="rounded-md bg-indigo-500 px-3.5 py-2.5 text-2xl font-semibold text-white shadow-sm hover:bg-indigo-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-400">Join the event now!</a>
               {% else %} 
               <a href="#participants" class="rounded-md bg-indigo-500 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-400">Register as participant</a>
               <!-- <a href="{{ '/register' | relative_url }}" class="text-sm font-semibold leading-6 text-white">Register your venue <span aria-hidden="true">→</span></a> -->
@@ -126,7 +126,7 @@ layout: default
                         </tr>
                         {% for venue in visible_venues %}
                           <tr class="border-t border-gray-800">
-                            <td class="whitespace-nowrap py-4 pl-4 pr-3 text-normal font-medium text-white sm:pl-3">
+                            <td class="whitespace-nowrap py-4 pl-4 pr-3 text-normal font-medium text-white sm:pl-6">
                               <a href="{{ venue.url }}" class="text-white underline">{{ venue.venueName }}</a>
                             </td>
                             <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-300">{{ venue.primaryContactName}}</td>

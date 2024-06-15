@@ -46,10 +46,11 @@ layout: default
         <h2 class="text-3xl font-bold tracking-tight text-white sm:text-4xl">Visit the intranet<br>Start your onboarding today</h2>
         <p class="mx-auto mt-6 max-w-xl text-lg leading-8 text-gray-300">To get started with the event, visit the intranet.</p>
         <div class="mt-10 flex items-center justify-center gap-x-6">
-          <a href="https://intranet.globoticket.com" class="rounded-md bg-indigo-600 px-3.5 py-2.5 text-2xl font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Go to the intranet portal</a>
-          <br/>
           <img src="./images/intranet.png" alt="Globoticket Intranet" class="mt-4" width="500px">
         </div>
+         <div class="mt-10 flex items-center justify-center gap-x-6">
+          <a href="https://intranet.globoticket.com" class="rounded-md bg-indigo-600 px-3.5 py-2.5 text-2xl font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Go to the Intranet portal</a>
+          </div>
       </div>
     </div>  
   </div>
@@ -222,6 +223,10 @@ You can also watch the video that explains this <a href="https://youtu.be/reoUAS
           <dt class="text-base font-semibold leading-7 text-white">Will I get access to this after the event?</dt>
           <dd class="mt-2 text-base leading-7 text-gray-300">No. We provision the materials only on June 15th. It costs a lot of money to keep it up and running.</dd>
       </div>
+      <div>
+          <dt class="text-base font-semibold leading-7 text-white">I cannot log in with my account to enter the event</dt>
+          <dd class="mt-2 text-base leading-7 text-gray-300">Register yourself at your venue again, or let somebody else join instead. There is no need for all teammembers to log in and work isolated.</dd>
+      </div>
   </dl>
     </div>
   </div>
@@ -231,7 +236,6 @@ You can also watch the video that explains this <a href="https://youtu.be/reoUAS
 </div>
 
 <script>
-  // Add your custom JavaScript here
     window.onload = function() {
       const urlParams = new URLSearchParams(window.location.search);
       const name = urlParams.get('name');
