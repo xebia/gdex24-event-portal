@@ -1,6 +1,7 @@
 ---
 layout: default
 permalink: /register/
+published: false
 ---
 
 <div class="relative isolate bg-gray-900">
