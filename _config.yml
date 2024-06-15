@@ -13,7 +13,7 @@ twitter:
   username: xebia
   card: summary
 
-eventActive: true
+eventActive: false
 
 repository: globaldevopsexperience/event-portal
 

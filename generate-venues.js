@@ -67,7 +67,7 @@ async function main() {
   secondaryContactName: "${venue.secondaryContact?.name  }"
   secondaryUsername: "${venue.secondaryContact?.username }"
   proctors: ${JSON.stringify(proctors)}
-  canSignup: ${venue.canSignup}
+  canSignup: false
   isShown: ${venue.isShown}
 ---
 ${content}

@@ -52,16 +52,13 @@ layout: default
             {% if site.eventActive %}
             <h1 class="mt-10 text-4xl font-bold tracking-tight text-white sm:text-6xl">🎉 We are live!<br>Join the Global DevOps Experience on June 15,&nbsp;2024!</h1>
             {% else %}
-            <h1 class="mt-10 text-4xl font-bold tracking-tight text-white sm:text-6xl">Join the Global DevOps Experience on June 15,&nbsp;2024!</h1>
+            <h1 class="mt-10 text-4xl font-bold tracking-tight text-white sm:text-6xl">Welcome to the<br>Global&nbsp;DevOps&nbsp;Experience</h1>
             {% endif %}
             <p class="mt-6 text-lg leading-8 text-gray-300">Welcome to the <span class="font-bold tracking-tight text-white">Global DevOps Experience</span>, a unique, global event where the worlds of DevOps, Platform Engineering, and Developer Experience (DevEx) come together. </p>
-             <p class="mt-6 text-lg leading-8 text-gray-300">This one-day event will be hosted by many venues all over the world and is more than an event. It is an experience. You will be part of a team in a fictitious company, Globoticket, and help them to overcome some difficult and relevant challenges in the field of Platform Engineering, DevOps and Software Development. The event is centered around GitHub and Azure and AI and is the first global GitHub community event!</p>
+             <p class="mt-6 text-lg leading-8 text-gray-300">This one-day event was hosted by many venues all over the world and is more than an event. It is an experience. You are part of a team in a fictitious company, Globoticket, and help them to overcome some difficult and relevant challenges in the field of Platform Engineering, DevOps and Software Development. The event is centered around GitHub and Azure and AI and is the first global GitHub community event!</p>
             <div class="mt-10 flex items-center gap-x-6">
               {% if site.eventActive %}
                <a href="/event-day" class="rounded-md bg-indigo-500 px-3.5 py-2.5 text-2xl font-semibold text-white shadow-sm hover:bg-indigo-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-400">Join the event now!</a>
-              {% else %} 
-              <a href="#participants" class="rounded-md bg-indigo-500 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-400">Register as participant</a>
-              <!-- <a href="{{ '/register' | relative_url }}" class="text-sm font-semibold leading-6 text-white">Register your venue <span aria-hidden="true">→</span></a> -->
               {% endif %}
             </div>
           </div>
@@ -101,7 +98,7 @@ layout: default
         <div class="mx-auto lg:mx-0 ">
           <!-- <h2 class="text-base font-semibold leading-8 text-indigo-400">Already registered venues</h2> -->
           <p class="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">How do I participate!</p>
-          <p class="mt-6 text-lg leading-8 text-gray-300">On this page you can find a list of all venues that are registered around the world. Find a venue nearby and sign up at this venue to join the event! Don't see a venue nearby? Find a local DevOps community and ask them to host the event, or <a href="register" class="text-sm font-semibold leading-6 text-white">host</a> an event yourself.</p>
+          <p class="mt-6 text-lg leading-8 text-gray-300">As the experience already took place, you can no longer sign up. However, the below venues took part and provided a great event for their guests!</p>
         </div>
         <div id="map" class="mt-8" style="height: 680px;"></div>
         <div class="">
