@@ -26,7 +26,7 @@ layout: default
               <li>You will land on the Globoticket intranet where you will find a list of news messages. You can open them and read them.</li>
               <li>The top message contains a small arrow next to read more. This is a special message as it is the trigger to start the challenge.</li>
               <li>When you press Mark as Read, you will get a call that you need to answer. Listen to the instructions and press "start challenge"</li>
-              <li>You will be navigate to a GitHub repo. We have provisioned a repository, pipelines and full deployed azure enviroment with the running globoticket website at https://.globoticket.com</li>
+              <li>You will be navigate to a GitHub repo. We have provisioned a repository, pipelines and full deployed azure enviroment with the running globoticket website at https://teamname.globoticket.com</li>
               <li>Go through the challenge. Ask help by using the GitOps command /help, /expert-tip, /fix, /verify, /finish in the comments of the issue. You can execute the /verify multiple times</li>
               <li>Once done you can start a new challenge on the intranet</li>
               <li>More information you can find in the <a href="#handbook">Participant Manual</a>.</li>
@@ -90,6 +90,8 @@ You can also watch the video that explains this <a href="https://youtu.be/reoUAS
     <img src="./images/issue-comment.gif" alt="Issue Comment" class="mt-4">
         <h3 class="mt-8 text-xl font-bold leading-8 text-white">Team Info</h3>
     <p class="mt-4 text-lg leading-7 text-gray-200">To make sure all people know where to get their resources, we created a GitHub Issue <code class="bg-gray-800 text-white rounded px-1 py-0.5">Team Info</code>. This contains all secrets, etc. that are needed. THIS IS NOT BEST PRACTICE!!! DO NOT DO THIS NORMALLY!</p>
+            <h3 class="mt-8 text-xl font-bold leading-8 text-white">Globoticket public website</h3>
+    <p class="mt-4 text-lg leading-7 text-gray-200">Globoticket has a full Microservice based website that you can find on <a href="https://teamname.globoticket.com" class="text-blue-600 hover:text-blue-800 underline" target="_blank">https://teamname.globoticket.com</a>
         <h3 class="mt-8 text-xl font-bold leading-8 text-white">GitOps commands</h3>
     <p class="mt-4 text-lg leading-7 text-gray-200">To make sure you can finish the challenge and be successful, you can put comments in the issue at hand. When you put a comment like below, the people will respond:</p>
     <ul class="mt-4 list-disc list-inside text-lg leading-7 text-gray-200">

@@ -49,7 +49,11 @@ layout: default
                 <span class="rounded-full bg-indigo-500/10 px-3 py-1 text-xl font-semibold leading-6 text-indigo-400 ring-1 ring-inset ring-indigo-500/20">15 June, 2024</span>                
               </a>
             </div>
+            {% if site.eventActive %}
+            <h1 class="mt-10 text-4xl font-bold tracking-tight text-white sm:text-6xl">We are live!Join the Global DevOps Experience on June 15,&nbsp;2024!</h1>
+            {% else %}
             <h1 class="mt-10 text-4xl font-bold tracking-tight text-white sm:text-6xl">Join the Global DevOps Experience on June 15,&nbsp;2024!</h1>
+            {% endif %}
             <p class="mt-6 text-lg leading-8 text-gray-300">Welcome to the <span class="font-bold tracking-tight text-white">Global DevOps Experience</span>, a unique, global event where the worlds of DevOps, Platform Engineering, and Developer Experience (DevEx) come together. </p>
              <p class="mt-6 text-lg leading-8 text-gray-300">This one-day event will be hosted by many venues all over the world and is more than an event. It is an experience. You will be part of a team in a fictitious company, Globoticket, and help them to overcome some difficult and relevant challenges in the field of Platform Engineering, DevOps and Software Development. The event is centered around GitHub and Azure and AI and is the first global GitHub community event!</p>
             <div class="mt-10 flex items-center gap-x-6">
