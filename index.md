@@ -50,7 +50,7 @@ layout: default
               </a>
             </div>
             {% if site.eventActive %}
-            <h1 class="mt-10 text-4xl font-bold tracking-tight text-white sm:text-6xl">We are live!Join the Global DevOps Experience on June 15,&nbsp;2024!</h1>
+            <h1 class="mt-10 text-4xl font-bold tracking-tight text-white sm:text-6xl">🎉 We are live!<br>Join the Global DevOps Experience on June 15,&nbsp;2024!</h1>
             {% else %}
             <h1 class="mt-10 text-4xl font-bold tracking-tight text-white sm:text-6xl">Join the Global DevOps Experience on June 15,&nbsp;2024!</h1>
             {% endif %}
