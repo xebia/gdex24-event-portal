@@ -60,7 +60,7 @@ layout: default
               {% if site.eventActive %}
                <a href="/event-day" class="rounded-md bg-indigo-500 px-3.5 py-2.5 text-2xl font-semibold text-white shadow-sm hover:bg-indigo-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-400">Join the event now!</a>
               {% endif %}
-            </div>
+            </div>            
           </div>
           <div class="mx-auto mt-16 flex max-w-2xl sm:mt-24 lg:ml-10 lg:mr-0 lg:mt-0 lg:max-w-none lg:flex-none xl:ml-32">
             <div class="max-w-3xl flex-none sm:max-w-5xl lg:max-w-none">
@@ -68,6 +68,10 @@ layout: default
             </div>
           </div>
         </div> 
+        <div id="form" class="mx-auto max-w-7xl px-6">
+               <h2 class="text-2xl font-semibold leading-8 text-white">Subscribe to be informed about GDEX</h2>
+              <div id="form-hubspot" class="mt-10 mx-auto"></div>
+            </div>
       <!-- Logo cloud -->
       <div class="mx-auto mt-8 max-w-7xl px-6 sm:mt-16 lg:px-8">
         <h2 class="text-center text-lg font-semibold leading-8 text-white">This event is sponsored by</h2>
@@ -168,6 +172,43 @@ layout: default
       </div>
     </main>
   </div>
+  <style>
+.hs-input {
+  display: block;
+  width: 100%;
+  padding: 0.5rem 0.75rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #4a5568;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #e2e8f0;
+  border-radius: 0.375rem;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+.submitted-message
+{
+  color: #fff;
+  font-size: 1.5rem;
+  text-align: center;
+}
+.form-columns-1, .form-columns-2{
+  max-width: 100% !important;
+}
+</style>
+  <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/embed/v2.js"></script>
+<script>
+  hbspt.forms.create({
+    region: "na1",
+    portalId: "697348",
+    formId: "880d174c-1ae1-405a-9e97-5fa67b2a6fb9",
+    target: "#form-hubspot",
+    inlineMessage: "Thank you for your interest in the Global DevOps Experience.",
+    submitText: "Sign up",
+    submitButtonClass: "rounded-md bg-indigo-500 px-3.5 py-2.5 text-xl font-semibold text-white shadow-sm hover:bg-indigo-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-400",
+    cssClass: "text-lg leading-8 text-justify text-gray-300",    
+  });
+</script>
   <script>
 
 {% assign maxR = "20" %}
