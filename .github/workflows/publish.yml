@@ -44,8 +44,7 @@ jobs:
           static_site_generator: jekyll
       
       - name: Build
-        run: |
-          node generate-venues.js
+        run: |          
           JEKYLL_ENV=production bundle exec jekyll build
         env:
           FIREBASE_SERVICE_ACCOUNT: ${{ secrets.FIREBASE_SERVICE_ACCOUNT }}
