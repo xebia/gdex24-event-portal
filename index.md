@@ -12,7 +12,7 @@ layout: default
   </div>
   <div class="flex flex-wrap items-center gap-x-4 gap-y-2">
     <p class="text-sm leading-6 text-gray-900">
-      <strong class="font-semibold">Global DevOps Experience 2024</strong><svg viewBox="0 0 2 2" class="mx-2 inline h-0.5 w-0.5 fill-current" aria-hidden="true"><circle cx="1" cy="1" r="1" /></svg>The event is currently active, join now!
+      <strong class="font-semibold">Global DevOps Experience 2025</strong><svg viewBox="0 0 2 2" class="mx-2 inline h-0.5 w-0.5 fill-current" aria-hidden="true"><circle cx="1" cy="1" r="1" /></svg>The event is currently active, join now!
     </p>
     <a href="/event-day" class="flex-none rounded-full bg-gray-900 px-3.5 py-1 text-normal font-semibold text-white shadow-sm hover:bg-gray-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gray-900">Join<span aria-hidden="true">&rarr;</span></a>
   </div>
@@ -46,11 +46,11 @@ layout: default
           <img src="images/Logo-trans Small.png" alt="GDEX">        
             <div class="mt-24 sm:mt-32 lg:mt-16">
               <a href="#" class="inline-flex space-x-6">
-                <span class="rounded-full bg-indigo-500/10 px-3 py-1 text-xl font-semibold leading-6 text-indigo-400 ring-1 ring-inset ring-indigo-500/20">15 June, 2024</span>                
+                <span class="rounded-full bg-indigo-500/10 px-3 py-1 text-xl font-semibold leading-6 text-indigo-400 ring-1 ring-inset ring-indigo-500/20">15 June, 2025</span>                
               </a>
             </div>
             {% if site.eventActive %}
-            <h1 class="mt-10 text-4xl font-bold tracking-tight text-white sm:text-6xl">🎉 We are live!<br>Join the Global DevOps Experience on June 15,&nbsp;2024!</h1>
+            <h1 class="mt-10 text-4xl font-bold tracking-tight text-white sm:text-6xl">🎉 We are live!<br>Join the Global DevOps Experience on October 4,&nbsp;2025!</h1>
             {% else %}
             <h1 class="mt-10 text-4xl font-bold tracking-tight text-white sm:text-6xl">Welcome to the<br>Global&nbsp;DevOps&nbsp;Experience</h1>
             {% endif %}
