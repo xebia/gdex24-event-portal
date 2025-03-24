@@ -2,12 +2,12 @@
 title: Global DevOps Experience
 email: your-email@example.com
 description: >- # this means to ignore newlines until "baseurl:"
-  Welcome to the Global DevOps Experience 2024, a unique, global event where the worlds of DevOps and DevEX converge. 
+  Welcome to the Global DevOps Experience 2025, a unique, global event where the worlds of DevOps and DevEX converge. 
   This event is designed for those intrigued by the potential of technology to transform traditional development practices into something far more dynamic by using GitHub, AI, security and Azure.
 baseurl: "" # the subpath of your site, e.g. /blog
 
-url: https://www.globaldevopsx.com
-logo: https://www.globaldevopsx.com/images/banner.png
+url: https://globaldevexperience.com
+logo: https://globaldevexperience.com/images/banner.png
 
 twitter:
   username: xebia
@@ -15,7 +15,7 @@ twitter:
 
 eventActive: false
 
-repository: globaldevopsexperience/event-portal
+repository: xebia/gdex24-event-portal
 
 # Build settings
 theme: minima
