@@ -236,7 +236,9 @@ layout: default
       {% endif %}
     {% endfor %}
     ];
- 
+
+// Clear for now
+ gData.length = 0;
 
     const colorInterpolator = t => `rgba(255,100,50,${Math.sqrt(1-t)})`;
 
