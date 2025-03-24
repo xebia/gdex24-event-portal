@@ -98,10 +98,9 @@ layout: default
         </div>
       </div>
       <!-- Current venues -->
-      <!--
-       <div class="mx-auto mt-32 max-w-7xl px-6 sm:mt-26 lg:px-8" id="participants">
+      <!--   <div class="mx-auto mt-32 max-w-7xl px-6 sm:mt-26 lg:px-8" id="participants">
         <div class="mx-auto lg:mx-0 ">
-          <!-- <h2 class="text-base font-semibold leading-8 text-indigo-400">Already registered venues</h2> -->
+          <h2 class="text-base font-semibold leading-8 text-indigo-400">Already registered venues</h2> 
           <p class="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">How do I participate!</p>
           <p class="mt-6 text-lg leading-8 text-gray-300">As the experience already took place, you can no longer sign up. However, the below venues took part and provided a great event for their guests!</p>
         </div>
