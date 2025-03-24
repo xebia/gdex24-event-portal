@@ -46,7 +46,7 @@ layout: default
           <img src="images/Logo-trans Small.png" alt="GDEX">        
             <div class="mt-24 sm:mt-32 lg:mt-16">
               <a href="#" class="inline-flex space-x-6">
-                <span class="rounded-full bg-indigo-500/10 px-3 py-1 text-xl font-semibold leading-6 text-indigo-400 ring-1 ring-inset ring-indigo-500/20">15 June, 2025</span>                
+                <span class="rounded-full bg-indigo-500/10 px-3 py-1 text-xl font-semibold leading-6 text-indigo-400 ring-1 ring-inset ring-indigo-500/20">4 October, 2025</span>                
               </a>
             </div>
             {% if site.eventActive %}
@@ -98,6 +98,7 @@ layout: default
         </div>
       </div>
       <!-- Current venues -->
+      <!--
        <div class="mx-auto mt-32 max-w-7xl px-6 sm:mt-26 lg:px-8" id="participants">
         <div class="mx-auto lg:mx-0 ">
           <!-- <h2 class="text-base font-semibold leading-8 text-indigo-400">Already registered venues</h2> -->
@@ -143,6 +144,7 @@ layout: default
           </div>
         </div>
       </div> 
+      -->
       <!-- CTA section -->
       <div class="relative isolate mt-4 px-6 py-32 sm:mt-16 sm:py-40 lg:px-8">
         <svg class="absolute inset-0 -z-10 h-full w-full stroke-white/10 [mask-image:radial-gradient(100%_100%_at_top_right,white,transparent)]" aria-hidden="true">
