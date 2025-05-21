@@ -97,7 +97,7 @@ layout: default
           <p class="mt-6 text-lg leading-8 text-gray-300 text-justify">The event is hosted in 40 venues around the world. Because GDEX is an event out of the box, the participants get a fully fledged working environment on GitHub and Azure to directly get started with the real work.</p>
         </div>
       </div>
-       <div class="mx-auto mt-32 max-w-7xl px-6 sm:mt-26 lg:px-8" id="more">
+       <div class="mx-auto mt-8 max-w-7xl px-6 sm:mt-26 lg:px-8" id="more">
         <div class="mx-auto  text-center">
           <h2 class="text-base font-semibold leading-7 text-indigo-400">From Prompt to Production</h2>
           <p class="mt-6 text-lg leading-8 text-gray-300 text-justify">After last year’s success helping Globoticket recover and modernize, the story continues with <span class="font-semibold">Globoticket&nbsp;Agency</span>, an AI-first platform for artist booking. Instead of traditional booking managers, AI agents now handle the work: matching artists to events, generating contracts, managing schedules, and automating updates. In this next chapter of the Global DevOps Experience, you'll explore a new way of building software, where developers don’t write every line of code themselves, but collaborate with AI agents that understand context, take action, and optimize workflows.</p>
