@@ -54,13 +54,19 @@ layout: default
             {% else %}
             <h1 class="mt-10 text-4xl font-bold tracking-tight text-white sm:text-6xl">Welcome to the<br>Global&nbsp;DevOps&nbsp;Experience</h1>
             {% endif %}
-            <p class="mt-6 text-lg leading-8 text-gray-300">Welcome to the <span class="font-bold tracking-tight text-white">Global DevOps Experience</span>, a unique, global event where the worlds of DevOps, Platform Engineering, and Developer Experience (DevEx) come together. </p>
-             <p class="mt-6 text-lg leading-8 text-gray-300">This one-day event was hosted by many venues all over the world and is more than an event. It is an experience. You are part of a team in a fictitious company, Globoticket, and help them to overcome some difficult and relevant challenges in the field of Platform Engineering, DevOps and Software Development. The event is centered around GitHub and Azure and AI and is the first global GitHub community event!</p>
+            <p class="mt-6 text-lg leading-8 text-gray-300">Welcome to the <span class="font-bold tracking-tight text-white">Global DevOps Experience</span>, a unique, global event where the worlds of GitHub, (Agentic) DevOps and Developer Experience (DevEx) come together. </p>
+             <p class="mt-6 text-lg leading-8 text-gray-300">This one-day event was hosted by many venues all over the world and is more than an event. It is an experience. You are part of a team in a fictitious company, Globoticket, and help them to overcome some difficult and relevant challenges in the field of Platform Engineering, DevOps and Software Development. The event is centered around GitHub and AI and is the first Global GitHub community event!</p>
             <div class="mt-10 flex items-center gap-x-6">
               {% if site.eventActive %}
                <a href="/event-day" class="rounded-md bg-indigo-500 px-3.5 py-2.5 text-2xl font-semibold text-white shadow-sm hover:bg-indigo-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-400">Join the event now!</a>
               {% endif %}
-            </div>            
+            </div>
+                   <div class="mx-auto mt-8 max-w-7xl px-6 sm:mt-26 lg:px-8" id="more">
+        <div class="mx-auto  text-center">
+          <h2 class="text-base font-semibold leading-7 text-indigo-400">From Prompt to Production</h2>
+          <p class="mt-6 text-lg leading-8 text-gray-300 text-justify">After last year’s success helping Globoticket recover and modernize, the story continues with <span class="font-semibold">Globoticket&nbsp;Agency</span>, an AI-first platform for artist booking. Instead of traditional booking managers, AI agents now handle the work: matching artists to events, generating contracts, managing schedules, and automating updates. In this next chapter of the Global DevOps Experience, you'll explore a new way of building software, where developers don’t write every line of code themselves, but collaborate with AI agents that understand context, take action, and optimize workflows.</p>
+        </div>
+      </div>            
           </div>
           <div class="mx-auto mt-16 flex max-w-2xl sm:mt-24 lg:ml-10 lg:mr-0 lg:mt-0 lg:max-w-none lg:flex-none xl:ml-32">
             <div class="max-w-3xl flex-none sm:max-w-5xl lg:max-w-none">
@@ -68,10 +74,10 @@ layout: default
             </div>
           </div>
         </div> 
-        <div id="form" class="mx-auto max-w-7xl px-6">
-               <h2 class="text-2xl font-semibold leading-8 text-white">Subscribe to be informed about GDEX</h2>
-              <div id="form-hubspot" class="mt-10 mx-auto"></div>
-            </div>
+                 <div class="mt-10 flex items-center justify-center gap-x-6">
+            <a href="https://sessionize.com/gdex-2025/" target="_blank" class="rounded-md bg-white px-3.5 py-2.5 text-sm font-semibold text-gray-900 shadow-sm hover:bg-gray-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white">Register your venue</a>
+            <a href="#more" class="text-sm font-semibold leading-6 text-white">Learn more <span aria-hidden="true">→</span></a>
+          </div>
       <!-- Logo cloud -->
       <div class="mx-auto mt-8 max-w-7xl px-6 sm:mt-16 lg:px-8">
         <h2 class="text-center text-lg font-semibold leading-8 text-white">This event is sponsored by</h2>
@@ -89,18 +95,12 @@ layout: default
           <p class="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">The story</p>
           <p class="mt-6 text-lg leading-8 text-gray-300 text-justify">In 2017 the makers of GDEX created the <a href="https://globaldevopsbootcamp.com">Global DevOps Bootcamp</a> which was held in 2019 for the last time. In 2019 GDBC had 10.000 people joining the event in 92 venues in 32 countries all over the world. A true global community event. 
           </p>
-          <p class="mt-6 text-lg leading-8 text-gray-300 text-justify">The Global DevOps experience follows a similar concept. The Global DevOps Experience is an "Event out of the box" and follows the sun. An event where the worlds of DevOps, Platform Engineering, Developer Experience (DevEx) and AI come together! 
+          <p class="mt-6 text-lg leading-8 text-gray-300 text-justify">The Global DevOps experience follows a similar concept. The Global DevOps Experience is an "Event out of the box" and follows the sun. An event where the worlds of GitHub, (Agentic) DevOps and Developer Experience (DevEx) come together.! 
           </p>
           <p class="mt-6 text-lg leading-8 text-gray-300 text-justify">This one-day event will be hosted by many venues all over the world and is more than an event. It is an experience! Participants will be part of a team in a fictitious company, Globoticket, and help them to overcome some difficult and relevant challenges in the field of Platform Engineering, DevOps with GitHub and Azure, and Software Development with AI.</p>
-          <p class="mt-6 text-lg leading-8 text-gray-300 text-justify">People will be introduced in using GitHub Codespaces, Copilot and Advanced Security. THey will learn to deploy their software in a controlled manner and use tools like Azure OpenAI and Semantic Kernel to come up with creative solutions to save Globoticket.
+          <p class="mt-6 text-lg leading-8 text-gray-300 text-justify">
           The event is all about learning and experiencing the latest and greatest tools and lower the barrier to use this during the day-to-day job.</p>
           <p class="mt-6 text-lg leading-8 text-gray-300 text-justify">The event is hosted in 40 venues around the world. Because GDEX is an event out of the box, the participants get a fully fledged working environment on GitHub and Azure to directly get started with the real work.</p>
-        </div>
-      </div>
-       <div class="mx-auto mt-8 max-w-7xl px-6 sm:mt-26 lg:px-8" id="more">
-        <div class="mx-auto  text-center">
-          <h2 class="text-base font-semibold leading-7 text-indigo-400">From Prompt to Production</h2>
-          <p class="mt-6 text-lg leading-8 text-gray-300 text-justify">After last year’s success helping Globoticket recover and modernize, the story continues with <span class="font-semibold">Globoticket&nbsp;Agency</span>, an AI-first platform for artist booking. Instead of traditional booking managers, AI agents now handle the work: matching artists to events, generating contracts, managing schedules, and automating updates. In this next chapter of the Global DevOps Experience, you'll explore a new way of building software, where developers don’t write every line of code themselves, but collaborate with AI agents that understand context, take action, and optimize workflows.</p>
         </div>
       </div>
       <!-- Current venues -->
@@ -169,10 +169,7 @@ layout: default
         <div class="mx-auto max-w-7xl text-center px-6 sm:mt-26 lg:px-8">
           <h2 class="text-3xl font-bold tracking-tight text-white sm:text-4xl">What do I need to do to host a venue</h2>
           <p class="mx-auto mt-6  text-lg leading-8 text-justify text-gray-300">Well, since GDEX is an event-out-of-the-box, you need to arrange a venue, some lunch and some people with a community ❤️ that can help proctoring GitHub, Azure and the challenges. Don't worry! We, the organizers, provide you, the local venue, with everything you need to run a high-value community event. We provide the presentations, the hands-on labs, the infrastructure, and a fun narrative for the day. We also provide instructions around the challenges and how to proctor these. </p>
-         <div class="mt-10 flex items-center justify-center gap-x-6">
-            <a href="https://sessionize.com/gdex-2025/" target="_blank" class="rounded-md bg-white px-3.5 py-2.5 text-sm font-semibold text-gray-900 shadow-sm hover:bg-gray-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white">Register your venue</a>
-            <a href="#more" class="text-sm font-semibold leading-6 text-white">Learn more <span aria-hidden="true">→</span></a>
-          </div>
+
         </div>
       </div>
     </main>
